@@ -1,0 +1,368 @@
+//Dashboard Main
+.ts-d-header-area {
+  background-image: url("../images/login-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 60px;
+  width: 100%;
+
+}
+
+.ts-ds-logo {
+  a {
+    img {
+      width: 90px;
+    }
+  }
+}
+
+.ts-user {
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.ts-user-name {
+  font-weight: bold;
+}
+
+.ts-d-header-main {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+//Dashboard
+.ts-d-main-area {
+  margin-top: 4.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.ts-d-sidebar-area {
+  flex-basis: 250px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(7, 152, 255, 0.1);
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 1rem;
+}
+
+.ts-d-user-avatar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    -o-object-fit: cover;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.ts-d-user-avatar-name {
+  color: #2a2a2a;
+  font-weight: bold;
+}
+
+//Sidebar Navigation
+
+.ts-d-sidebar-navigation {
+  h6 {
+    margin-bottom: 1.8rem;
+  }
+}
+
+ul.ts-d-nav {
+  display: block;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin-bottom: 1rem;
+
+    i {
+      margin-right: 1rem;
+    }
+  }
+
+  li {
+    a {
+      font-size: 1rem;
+      transition: all 0.4s ease-in-out;
+      color: #4d4d4d;
+      text-decoration: none;
+      font-weight: 500;
+      display: block;
+      background-color: transparent;
+      padding: 2px;
+      border-radius: 2px;
+
+      &:hover {
+        color: #0DC3F8;
+        background-color: #f7f7f7;
+        padding: 2px;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  li {
+    a {
+      span.ts-d-notification-no {
+        float: right;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: #0DC3F8;
+        text-align: center;
+        color: #ffffff;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  li {
+    a.active {
+      color: #0DC3F8;
+    }
+  }
+
+}
+
+.ts-d-common-area {
+  flex-grow: 1;
+  overflow: hidden;
+  position: relative;
+  margin-right: 20px;
+}
+
+.ts-d-top-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ts-d-acc-name-text {
+  color: $brand-color;
+  font-weight: 600;
+}
+
+//Filter
+.ts-d-filter {
+  background-color: #0DC3F8;
+  color: #ffffff;
+  padding: 5px;
+  cursor: pointer;
+}
+
+
+//Tickets
+.ts-ticket-buttons-area {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ts-d-ticket {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(7, 152, 255, 0.12);
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: calc(50% - 30px);
+  margin: 10px 10px 15px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ts-d-ticket {
+  span.ts-d-ticket-no {
+    color: #6C757D;
+    font-size: 26px;
+    font-family: $nunito;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.ts-d-ticket-header {
+  display: flex;
+  justify-content: space-between;
+
+  .ts-ticket-icon {
+    padding: 10px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+//Color Classes
+.ts-icon-blue {
+  background: rgba(0, 112, 225, 0.25);
+  color: rgba(0, 112, 225, 1);
+}
+
+.ts-icon-sky {
+  background: rgba(13, 195, 248, 0.25);
+  color: rgba(13, 195, 248, 1);
+}
+
+.ts-icon-pink {
+  background: rgba(255, 96, 96, 0.25);
+  color: rgba(255, 96, 96, 1);
+}
+
+.ts-icon-green {
+  background: rgba(26, 188, 56, 0.25);
+  color: rgba(26, 188, 56, 1);
+}
+
+.ts-d-ticket {
+  p {
+    margin-bottom: 0;
+    font-size: 13px;
+  }
+}
+
+.ts-roi-plus {
+  color: #00C486;
+  font-family: $nunito;
+  font-size: 16px;
+  font-weight: 600;
+
+  i {
+    transform: rotate(-90deg);
+    display: inline-block;
+  }
+}
+
+.ts-roi-minus {
+  color: #FF6060;
+  font-family: $nunito;
+  font-size: 16px;
+  font-weight: 600;
+
+  i {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+}
+
+.ts-d-ticket-btn {
+  width: 100%;
+  height: 100%;
+}
+
+//Work Process Table
+.ts-d-workprocess-table-area {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(7, 152, 255, 0.12);
+  padding: 15px;
+  margin: 0 10px;
+}
+
+.ts-workprocess-table-main {
+
+}
+
+.ts-workprocess-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ts-status-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+//Done
+span.ts-status-done {
+  background-color: #4CBFB3;
+  height: 40px;
+  width: 15px;
+  display: inline-block;
+}
+
+span.ts-status-text-done {
+  color: #4CBFB3;
+  font-weight: bold;
+}
+
+//Expired
+span.ts-status-expired {
+  background-color: #878787;
+  height: 40px;
+  width: 15px;
+  display: inline-block;
+}
+
+span.ts-status-text-expired {
+  color: #878787;
+  font-weight: bold;
+}
+
+//Pending
+span.ts-status-pending {
+  background-color: #FF6B6B;
+  height: 40px;
+  width: 15px;
+  display: inline-block;
+}
+
+span.ts-status-text-pending {
+  color: #FF6B6B;
+  font-weight: bold;
+}
+
+//Process
+span.ts-status-process {
+  background-color: #FFC861;
+  height: 40px;
+  width: 15px;
+  display: inline-block;
+}
+
+span.ts-status-text-process {
+  color: #FFC861;
+  font-weight: bold;
+}
+
+//Charts
+
+#ts-msc, #ts-wgr {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(7, 152, 255, 0.12);
+  margin-top: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+
+
+
+
+
+
+
+

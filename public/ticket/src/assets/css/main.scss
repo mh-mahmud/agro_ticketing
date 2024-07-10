@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css");
+
+/*============================
+     Variable Deceleration
+  ============================*/
+$nunito: 'Nunito', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$brand-color: #0DC3F8;
+
+/*============================
+        Mixin Declaration
+  ============================*/
+//All Mixin For Tickets
+@mixin bg-white {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(7, 152, 255, 0.12);
+    padding: 15px;
+}
+
+
+/*============================
+         All Import
+  ============================*/
+@import "theme/common";
+@import "theme/dashboard";
+@import "theme/profile";
+@import "theme/ticket";
+@import "theme/chat";
+@import "theme/error";
+@import "theme/notification";
+@import "theme/report";
+
+
+html, body {
+    font-family: 'Nunito', sans-serif !important;
+    background-color: #FAFBFE !important;
+    position: relative;
+}
+
+.App{
+    overflow: hidden;
+}
+
+::selection {
+    background: rgba(230, 0, 18, .8);
+    color: #fff;
+}
+
+/*============================
+       Login Page design
+  ============================*/
+.ts-login-page-area {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.ts-login-bottom-image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -18%;
+}
+
+.ocean {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.wave {
+    background: url(../images/wave.svg) repeat-x left bottom, url(../images/wavestwo.svg) right bottom repeat-x;
+    position: absolute;
+    top: -200px;
+    width: 6400px;
+    height: 201px;
+    animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+    background-blend-mode: multiply, multiply;
+    opacity: 0.5;
+}
+
+//.wave:nth-of-type(2) {
+//    top: -175px;
+//    animation: wave 20s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+//    opacity: 1;
+//}
+
+@keyframes wave {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -1600px;
+    }
+}
+
+@keyframes swell {
+    0%, 100% {
+        transform: translate3d(0, -25px, 0);
+    }
+    50% {
+        transform: translate3d(0, 5px, 0);
+    }
+}
+
+.ts-login-page-main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.ts-login-card-area {
+    max-width: 600px;
+    margin: 0 15px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(7, 152, 255, 0.12);
+    padding: 1rem 3rem;
+    position: relative;
+    z-index: 3;
+}
+
+
+/*============================
+        Login Form Inputs
+  ============================*/
+.ts-login-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #4D4D4D;
+    @media all and (max-width: 600px) {
+        font-size: 16px;
+    }
+}
+
+.user-input-wrp {
+    position: relative;
+    margin-bottom: 50px;
+    display: block;
+    height: 45px;
+}
+
+.ts-user-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.ts-lock-icon {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.ts-eye-icon {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.user-input-wrp .inputText {
+    transition: all 0.4s ease-in-out;
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(13, 195, 248, 0.2);
+    height: 45px;
+    padding-left: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-box-shadow: 0 0 0 64px #fff inset !important;
+    font-family: sans-serif;
+}
+
+.user-input-wrp .inputText:focus {
+    border-color: $brand-color;
+    border-width: medium medium 2px;
+}
+
+.user-input-wrp .floating-label {
+    position: absolute;
+    pointer-events: none;
+    top: 10px;
+    left: 40px;
+    transition: 0.2s ease all;
+    font-size: 1rem;
+}
+
+.user-input-wrp input:focus ~ .floating-label,
+.user-input-wrp input:not(:focus):valid ~ .floating-label {
+    top: 0;
+    left: 40px;
+    font-size: 10px;
+    line-height: 1.2;
+    opacity: 0.8;
+    color: #B8B8B8;
+}
+
+//Autofill By Browser
+.user-input-wrp input:-webkit-autofill ~ .floating-label,
+.user-input-wrp input:-webkit-autofill:not(:focus):valid ~ .floating-label {
+    top: 0;
+    left: 40px;
+    font-size: 10px;
+    line-height: 1.2;
+    opacity: 0.8;
+    color: #B8B8B8;
+}
+
+.user-input-wrp input:autofill ~ .floating-label,
+.user-input-wrp input:autofill:not(:focus):valid ~ .floating-label {
+    top: 0;
+    left: 40px;
+    font-size: 10px;
+    line-height: 1.2;
+    opacity: 0.8;
+    color: #B8B8B8;
+}
+
+button.ts-login-btn {
+    transition: all 0.4s ease-in-out;
+    margin: auto;
+    background-color: #0DC3F8;
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(13, 195, 248, 0.2);
+    border-radius: 10px;
+    height: 50px;
+
+    &:hover {
+        background-color: darken(#0DC3F8, 10%);
+    }
+}
+
+
+.ts-login-page-copyright {
+    position: fixed;
+    left: auto;
+    right: auto;
+    bottom: 10px;
+    color: #222222;
+    z-index: 10;
+    font-size: 0.9rem;
+}
+
+
+/*============================
+     CrossBrowser ScrollBar
+  ============================*/
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(155, 230, 253, 0.8), rgba(0, 0, 0, 0.099);
+}
+
+::-webkit-scrollbar {
+    width: 5px; /* for vertical scrollbars */
+    height: auto; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.099);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(155, 230, 253, 0.8);
+    border-radius: 30px;
+}

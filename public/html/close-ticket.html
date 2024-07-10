@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Ticketing Systems | Tickets Overview</title>
+</head>
+<body>
+<!--Dashboard Header-->
+<div class="ts-d-header-area fixed-top">
+    <div class="container-fluid">
+        <div class="ts-d-header-main">
+            <div class="ts-ds-logo">
+                <a href="">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="ts-user">
+                <p><span class="ts-user-greetings">Good Evening</span>
+                    <span class="ts-user-name">IBRAHIM</span>
+                    <img class="ts-user-pic" src="assets/images/admin-user.svg" alt="">
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ts-d-main-area">
+    <!--    Sidebar-->
+    <div class="ts-d-sidebar-area">
+
+        <!--        Profile Avatar-->
+        <div class="ts-d-user-avatar">
+            <img src="assets/images/profile-user.svg" alt="">
+            <span class="ts-d-user-avatar-name">
+                Genuity Systems
+            </span>
+        </div>
+
+
+        <div class="ts-d-sidebar-navigation mt-5">
+            <h6>NAVIGATION</h6>
+            <ul class="ts-d-nav">
+                <li><a class="active" href="dashboard.html"><i class="bi bi-house-door"></i> Dashboard</a></li>
+                <li><a href="profile.html"><i class="bi bi-person-fill"></i> Profile</a></li>
+                <li><a href="create-ticket.html"><i class="bi bi-pip"></i> Ticket</a></li>
+                <li><a href=""><i class="bi bi-bell"></i> Notification <span class="ts-d-notification-no">4</span> </a>
+                </li>
+                <li><a href=""><i class="bi bi-bar-chart-line-fill"></i> Report</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!--    End Sidebar-->
+
+    <!--    Main Content Area-->
+    <div class="ts-d-common-area">
+
+        <!--        Header Components-->
+        <div class="ts-d-top-header mb-2">
+            <div class="ts-d-acc-name">
+                <span class="bi bi-list"></span>
+                <span class="ts-d-acc-name-text text-uppercase">create ticket</span>
+            </div>
+            <!--      <div class="ts-d-date">-->
+            <!--        <input type="text" id="datepicker">-->
+            <!--        <span class="bi bi-filter ts-d-filter"></span>-->
+            <!--      </div>-->
+        </div>
+        <!--       End Header Components-->
+
+
+        <!--        Ticket Area-->
+        <div class="ts-d-tickets-area">
+
+            <div class="ts-d-submenu-area">
+
+
+                <div class="ts-d-left-toolbar ts-d-top-toolbar">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="bi bi-house-door"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="bi bi-ui-checks"></i> My Job
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="bi bi-file-lock"></i> Change Password
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="ts-d-right-toolbar ts-d-top-toolbar">
+                    <ul>
+                        <li>
+                            <a href="open-ticket.html">
+                                <i class="bi bi-folder2-open"></i> Opened Ticket
+                            </a>
+                        </li>
+                        <li>
+                            <a href="close-ticket.html">
+                                <i class="bi bi-folder-x"></i> Close Ticket
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="ts-d-tickets-overview">
+
+                <!--Search-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ts-d-search-area">
+                            <form id="ts-d-search" action="">
+                                <input type="search" name="" id="" placeholder="Search your item..." required>
+                                <button class="ts-d-search-btn" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--End Search-->
+
+
+                <!--  Work Process-->
+                <div class="ts-d-workprocess-table-area mt-4">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="ts-workprocess-table-main">
+                                <div class="ts-workprocess-table-header">
+                                    <p class="ts-components-title text-uppercase">WORK PROCESS</p>
+                                    <span><i class="bi bi-three-dots-vertical"></i></span>
+                                </div>
+                                <div class="ts-workprocess-table-content table-responsive">
+
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th class="text-center" scope="col"> Ticket Ref #</th>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Subject</th>
+                                            <th scope="col">Creator</th>
+                                            <th scope="col">Client ID</th>
+                                            <th scope="col">Assg. To</th>
+                                            <th scope="col">TIME</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Details</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th class="text-center" scope="row">1</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            <td>007</td>
+                                            <td>Otto</td>
+                                            <td>
+                                                <span>02:45 pm, 14-06-21</span>
+                                            </td>
+                                            <td>
+                                                <div class="ts-status-area">
+                                                    <span class="ts-status-text-done">Done</span>
+                                                    <span class="ts-status-done"></span>
+                                                </div>
+                                            </td>
+                                            <td>Otto</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center" scope="row">2</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            <td>007</td>
+                                            <td>Otto</td>
+                                            <td>
+                                                <span>02:45 pm, 14-06-21</span>
+                                            </td>
+                                            <td>
+                                                <div class="ts-status-area">
+                                                    <span class="ts-status-text-done">Done</span>
+                                                    <span class="ts-status-done"></span>
+                                                </div>
+                                            </td>
+                                            <td>Otto</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center" scope="row">3</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>007</td>
+                                            <td>Otto</td>
+                                            <td>
+                                                <span>02:45 pm, 14-06-21</span>
+                                            </td>
+                                            <td>
+                                                <div class="ts-status-area">
+                                                    <span class="ts-status-text-done">Done</span>
+                                                    <span class="ts-status-done"></span>
+                                                </div>
+                                            </td>
+                                            <td>Otto</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center" scope="row">4</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>007</td>
+                                            <td>Otto</td>
+                                            <td>
+                                                <span>02:45 pm, 14-06-21</span>
+                                            </td>
+                                            <td>
+                                                <div class="ts-status-area">
+                                                    <span class="ts-status-text-done">Done</span>
+                                                    <span class="ts-status-done"></span>
+                                                </div>
+                                            </td>
+                                            <td>Otto</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center" scope="row">5</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>007</td>
+                                            <td>Otto</td>
+                                            <td>
+                                                <span>02:45 pm, 14-06-21</span>
+                                            </td>
+                                            <td>
+                                                <div class="ts-status-area">
+                                                    <span class="ts-status-text-done">Done</span>
+                                                    <span class="ts-status-done"></span>
+                                                </div>
+                                            </td>
+                                            <td>Otto</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-center" scope="row">6</th>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                            <td>007</td>
+                                            <td>Otto</td>
+                                            <td>
+                                                <span>02:45 pm, 14-06-21</span>
+                                            </td>
+                                            <td>
+                                                <div class="ts-status-area">
+                                                    <span class="ts-status-text-done">Done</span>
+                                                    <span class="ts-status-done"></span>
+                                                </div>
+                                            </td>
+                                            <td>Details</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+
+                                    <!--  Pagination-->
+                                    <div class="ts-d-pagination">
+
+                                        <div class="page-navigation">
+                                            <nav aria-label="Page navigation">
+                                                <ul class="pagination">
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Previous">
+                                                        <span class="bi bi-chevron-compact-left"
+                                                              aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Next">
+                                                        <span class="bi bi-chevron-compact-right"
+                                                              aria-hidden="true"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+
+                                        <!--Custom Select-->
+                                        <div class="ml-auto">
+                                            <label for="ts-d-show-col">Show
+                                                <select class="ts-d-custom-select" id="ts-d-show-col">
+                                                    <option selected>10</option>
+                                                    <option value="1">20</option>
+                                                    <option value="2">50</option>
+                                                    <option value="3">100</option>
+                                                </select>
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--     End Work Process-->
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <!--    End Main Content Area-->
+</div>
+
+
+
+<!--all scripts-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="assets/js/main.js"></script>
+<!--all scripts-->
+</body>
+</html>

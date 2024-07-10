@@ -1,0 +1,272 @@
+:root {
+    --primary-color: #0DC3F8;
+    --danger-color: #FF6060;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*Fixme: For all Images*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-60 {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    -o-object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/*FIXME Additional Class => For Dashboard Settings (All Table list)*/
+.ts-d-common-list-view {
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(7, 152, 255, 0.1);
+    margin: 0 -15px
+}
+
+.ts-d-common-list-view .rdt_TableHeadRow {
+    background-color: #aceafd;
+    color: #4d4d4d;
+    font-weight: 600;
+    font-size: 1rem;
+    justify-content: center;
+}
+
+.rdt_TableHeadRow {
+    justify-content: center;
+}
+
+.ts-d-common-list-view .rdt_TableRow {
+    min-height: 46px;
+}
+
+.ts-d-common-list-view .rdt_TableCol {
+    justify-content: center;
+    min-width: 140px;
+}
+
+.rdt_TableCol {
+    justify-content: center;
+}
+
+.ts-d-common-list-view .rdt_TableCell {
+    justify-content: center;
+}
+
+@media all and (max-width: 600px) {
+    .ts-d-common-list-view .rdt_TableCell {
+        justify-content: center;
+        min-width: 150px !important;
+    }
+}
+
+.rdt_TableCell {
+    justify-content: center;
+    min-width: 140px !important;
+}
+
+
+@media all and (max-width: 600px) {
+    .ts-d-common-list-view .rdt_TableCell {
+        justify-content: center;
+        min-width: auto;
+    }
+}
+
+.ts-d-common-list-view .rdt_TableCell [data-tag="allowRowEvents"] {
+    white-space: break-spaces !important;
+    text-align: center;
+}
+
+
+/*FIXME Additional Class => For BusinessHoursListView.js*/
+.ts-d-custom-hours-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.ts-d-custom-hours-area .ts-d-custom-hours-btn {
+    border: 1px solid #dddddd;
+    border-radius: 2rem;
+    padding: 0.45rem;
+    text-align: center;
+    margin-right: 0.4rem;
+    margin-bottom: 0.4rem;
+    min-width: 65px;
+    transition: all 0.4s ease-in-out;
+    font-size: 0.85rem;
+}
+
+.ts-d-custom-hours-area button.ts-d-custom-hours-btn:hover {
+    border: 1px solid #0DC3F8;
+    background-color: #0DC3F8;
+    color: #ffffff;
+}
+
+.ts-d-custom-hours-area button.ts-d-custom-hours-btn.active {
+    border: 1px solid #0DC3F8;
+    background-color: #0DC3F8;
+    color: #ffffff;
+}
+
+/*Business Time*/
+.ts-d-business-time-area input[type="text"]:disabled {
+    background-color: transparent;
+    color: #484848;
+    font-weight: 500;
+    border-color: transparent;
+}
+
+/*Myeditor.js*/
+.ck-editor__editable_inline {
+    min-height: 200px;
+}
+
+
+/*=====================================================
+        Plugins Modal Overwrite (Plugins Overwrite)
+  =====================================================*/
+.ant-modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    pointer-events: auto;
+    margin: 10px 0;
+}
+
+.ant-modal-header {
+    padding: 16px 24px;
+    color: rgba(0, 0, 0, 0.85);
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 5px 5px 0 0;
+}
+
+.ant-modal-footer {
+    padding: 10px 16px;
+    text-align: right;
+    background: transparent;
+    border-top: 1px solid #f0f0f0;
+    border-radius: 0 0 5px 5px;
+}
+
+.ant-btn-primary {
+    color: #fff;
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+    color: #fff;
+    border-color: #00a0cd;
+    background: #00a0cd;
+}
+
+.ant-btn {
+    border-radius: 5px;
+}
+
+/*Overwrite Class*/
+.ant-modal-close-x {
+    line-height: 48px;
+    background-color: #e2e2e2;
+    color: #484848;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+.ant-modal-close-x:hover {
+    background-color: #FF6060;
+    color: #ffffff;
+    border-top-right-radius: 3px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+/*FIXME => TicketForm.JS*/
+.note-modal .modal-title {
+    display: none;
+}
+
+
+/*FIXME => Reply.JS*/
+.reply-message {
+    height: 100%;
+    width: 100%;
+}
+
+.fixedTextarea {
+    resize: none;
+}
+
+/*For All modal Elements*/
+.ant-modal-centered .ant-modal {
+    top: 0;
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    width: 70% !important;
+}
+
+@media all and (max-width: 768px) {
+    .ant-modal-centered .ant-modal {
+        top: 0;
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+        width: 95% !important;
+    }
+}
+
+/*Global Notification zindex overwrite for antd design*/
+.ant-notification {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: 'tnum', "tnum";
+    position: fixed;
+    z-index: 1050;
+    margin-right: 24px;
+}
+
+/*=======================================
+      Fixme: For all Input Select Field
+  =======================================*/
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 5px;
+}
+
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+    width: 100%;
+    height: 38px;
+    padding: 0 11px;
+}
+
+/* For all table font weight bold */
+.rdt_TableBody > *{
+    font-weight: bold !important;
+}

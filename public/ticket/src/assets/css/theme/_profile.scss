@@ -1,0 +1,591 @@
+.ts-d-profile-area {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.ts-d-profile-main {
+    min-height: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(7, 152, 255, 0.12);
+    padding: 15px;
+    background-image: url("../images/profile-bg.png");
+    background-position: left 15px top 150px;
+    background-repeat: no-repeat;
+    @media all and (max-width: 600px) {
+        background-position: top left;
+        background-size: 25%;
+    }
+}
+
+.ts-d-profile-content {
+    @media all and (max-width: 600px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -35px;
+    }
+}
+
+.ts-d-profile-avatar {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    width: calc(200px + 8vmin);
+    height: calc(200px + 8vmin);
+    @media all and (max-width: 600px) {
+        width: calc(100px + 8vmin);
+        height: calc(100px + 8vmin);
+
+    }
+
+    img {
+        width: calc(200px + 8vmin);
+        height: calc(200px + 8vmin);
+        border-radius: 50%;
+        object-fit: cover;
+        -o-object-fit: cover;
+        box-shadow: 0 0 10px rgba(7, 152, 255, 0.12);
+        background-color: #ffffff;
+        transition: all 0.4s ease-in-out;
+        @media all and (max-width: 600px) {
+            width: calc(100px + 8vmin);
+            height: calc(100px + 8vmin);
+            border: 5px solid #ffffff;
+        }
+
+    }
+
+    .ts-d-pic-upload {
+        transition: all 0.4s ease-in-out;
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        z-index: 4;
+        background-color: rgba(56, 56, 56, 0.9);
+        right: 35px;
+        bottom: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        @media all and (max-width: 600px) {
+            right: 0;
+        }
+
+        input[type=file] {
+            width: 0;
+            height: 0;
+            visibility: hidden;
+        }
+
+        i {
+            z-index: 4;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #FFFFFF;
+        }
+    }
+}
+
+
+.ts-d-profile-designation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    @media all and (max-width: 600px) {
+        justify-content: center;
+        align-items: center;
+    }
+    .ts-d-profile-user-name{
+        @media all and (max-width: 600px) {
+            flex-basis: 100%;
+            text-align: center;
+        }
+    }
+    h3 {
+        color: #4d4d4d;
+        font-weight: 600;
+        line-height: 1;
+        @media all and (max-width: 600px) {
+            font-size: 1.1rem;
+        }
+    }
+
+    h6 {
+        color: #4d4d4d;
+        font-weight: 600;
+    }
+}
+
+.ts-d-profile-details {
+    max-width: 500px;
+
+    p {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .ts-d-personal {
+        display: inline-block;
+        font-size: 16px;
+        font-family: $nunito;
+        color: #4d4d4d;
+
+        i {
+            color: $brand-color;
+            margin-right: 5px;
+        }
+    }
+}
+
+.ts-d-profile-edit {
+    background-color: $brand-color;
+    padding: 2px 1rem;
+    border-radius: 5px;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-family: $nunito;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+        background-color: darken($brand-color, 15%);
+    }
+}
+
+
+//Profile Ticket Status / Statistics
+.ts-d-user-statistics-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 15px;
+    @media all and (max-width: 1024px) {
+        flex-direction: column;
+    }
+}
+
+.ts-ticket-f-buttons-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: -10px 0 -15px -10px;
+}
+
+.ts-d-f-ticket {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(7, 152, 255, 0.12);
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: calc(50% - 30px);
+    margin: 10px 10px 15px;
+    min-height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    flex: 1 0 auto;
+    background-color: #ffffff;
+    @media all and (max-width: 600px) {
+        width: 100%;
+    }
+}
+
+.ts-d-f-ticket {
+    span.ts-d-f-ticket-no {
+        color: #6C757D;
+        font-size: 26px;
+        font-family: $nunito;
+        font-weight: 700;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
+    }
+}
+
+.ts-d-f-ticket-header {
+    display: flex;
+    justify-content: space-between;
+
+    .ts-ticket-f-icon {
+        padding: 10px 12px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+//Color Classes
+.ts-icon-blue {
+    background: rgba(0, 112, 225, 0.25);
+    color: rgba(0, 112, 225, 1);
+}
+
+.ts-icon-sky {
+    background: rgba(13, 195, 248, 0.25);
+    color: rgba(13, 195, 248, 1);
+}
+
+.ts-icon-pink {
+    background: rgba(255, 96, 96, 0.25);
+    color: rgba(255, 96, 96, 1);
+}
+
+.ts-icon-green {
+    background: rgba(26, 188, 56, 0.25);
+    color: rgba(26, 188, 56, 1);
+}
+
+.ts-d-f-ticket {
+    p {
+        margin-bottom: 0;
+        font-size: 14px;
+        font-family: $nunito;
+        font-weight: 600;
+    }
+}
+
+.ts-roi-plus {
+    color: #00C486;
+    font-family: $nunito;
+    font-size: 16px;
+    font-weight: 600;
+
+    i {
+        transform: rotate(-90deg);
+        display: inline-block;
+    }
+}
+
+.ts-roi-minus {
+    color: #FF6060;
+    font-family: $nunito;
+    font-size: 16px;
+    font-weight: 600;
+
+    i {
+        transform: rotate(90deg);
+        display: inline-block;
+    }
+}
+
+.ts-d-ticket-btn {
+    width: 100%;
+    height: 100%;
+}
+
+//Activity
+.ts-d-f-activity {
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(7, 152, 255, 0.12);
+    padding: 15px;
+    margin-left: 15px;
+}
+
+.ts-d-f-activity-header h6 {
+    color: #4d4d4d;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.ts-d-f-activity-log {
+    margin-top: 20px;
+}
+
+/*==================================
+    TIMELINE
+==================================*/
+
+/*-- GENERAL STYLES
+------------------------------*/
+.timeline {
+    line-height: 1.4em;
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+    width: 100%;
+
+    h1, h2, h3, h4, h5, h6 {
+        line-height: inherit;
+    }
+}
+
+/*----- TIMELINE ITEM -----*/
+.timeline-item {
+    padding-left: 40px;
+    position: relative;
+
+    &:last-child {
+        padding-bottom: 0;
+    }
+}
+
+/*----- TIMELINE INFO -----*/
+
+.timeline-info {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0 0 .5em 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/*----- TIMELINE MARKER -----*/
+
+.timeline-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15px;
+
+    &:before {
+        //background: #FF6B6B;
+        border: 3px solid transparent;
+        border-radius: 100%;
+        content: "";
+        display: block;
+        height: 15px;
+        position: absolute;
+        top: 4px;
+        left: 0;
+        width: 15px;
+        transition: background 0.3s ease-in-out,
+        border 0.3s ease-in-out;
+    }
+
+    &:after {
+        content: "";
+        width: 1px;
+        background: #9E9E9E;
+        display: block;
+        position: absolute;
+        top: 19px;
+        bottom: 0;
+        left: 7px;
+    }
+
+    .timeline-item:last-child &:after {
+        content: none;
+    }
+}
+
+.timeline-item:nth-child(odd) {
+    .timeline-marker {
+        &:before {
+            background-color: #0DC3F8;
+        }
+    }
+}
+
+.timeline-item:nth-child(even) {
+    .timeline-marker {
+        &:before {
+            background-color: #00C486;
+        }
+    }
+}
+
+.timeline-item:nth-child(3n) {
+    .timeline-marker {
+        &:before {
+            background-color: #FFC861;
+        }
+    }
+}
+
+.timeline-item:not(.period):hover .timeline-marker:before {
+    background: transparent;
+    border: 3px solid #0DC3F8;
+}
+
+/*----- TIMELINE CONTENT -----*/
+
+.timeline-content {
+    padding-bottom: 40px;
+    margin-top: -5px;
+
+    p {
+        color: #4d4d4d;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*----- TIMELINE PERIOD -----*/
+
+.period {
+    padding: 0;
+
+    .timeline-info {
+        display: none;
+    }
+
+    .timeline-marker {
+        &:before {
+            background: transparent;
+            content: "";
+            width: 15px;
+            height: auto;
+            border: none;
+            border-radius: 0;
+            top: 0;
+            bottom: 30px;
+            position: absolute;
+            border-top: 3px solid #CCD5DB;
+            border-bottom: 3px solid #CCD5DB;
+        }
+
+        &:after {
+            content: "";
+            height: 32px;
+            top: auto;
+        }
+    }
+
+    .timeline-content {
+        padding: 40px 0 70px;
+
+    }
+
+    .timeline-title {
+        margin: 0;
+    }
+}
+
+/*----------------------------------------------
+    MOD: TIMELINE SPLIT
+----------------------------------------------*/
+
+.timeline-split {
+    @media (min-width: 768px) {
+        .timeline {
+            display: table;
+        }
+        .timeline-item {
+            display: table-row;
+            padding: 0;
+        }
+        .timeline-info,
+        .timeline-marker,
+        .timeline-content,
+        .period .timeline-info {
+            display: table-cell;
+            vertical-align: top;
+        }
+        .timeline-marker {
+            position: relative;
+        }
+        .timeline-content {
+            padding-left: 30px;
+        }
+        .timeline-info {
+            padding-right: 30px;
+        }
+        .period .timeline-title {
+            position: relative;
+            left: -45px;
+        }
+    }
+}
+
+/*----------------------------------------------
+    MOD: TIMELINE CENTERED
+----------------------------------------------*/
+
+.timeline-centered {
+    @extend .timeline-split;
+    @media (min-width: 992px) {
+        &,
+        .timeline-item,
+        .timeline-info,
+        .timeline-marker,
+        .timeline-content {
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+        .timeline-item {
+            padding-bottom: 40px;
+            overflow: hidden;
+        }
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            margin-left: -7.5px;
+        }
+        .timeline-info,
+        .timeline-content {
+            width: 50%;
+        }
+        > .timeline-item:nth-child(odd) .timeline-info {
+            float: left;
+            text-align: right;
+            padding-right: 30px;
+        }
+        > .timeline-item:nth-child(odd) .timeline-content {
+            float: right;
+            text-align: left;
+            padding-left: 30px;
+        }
+        > .timeline-item:nth-child(even) .timeline-info {
+            float: right;
+            text-align: left;
+            padding-left: 30px;
+        }
+        > .timeline-item:nth-child(even) .timeline-content {
+            float: left;
+            text-align: right;
+            padding-right: 30px;
+        }
+        > .timeline-item.period .timeline-content {
+            float: none;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+        }
+        .timeline-item.period {
+            padding: 50px 0 90px;
+        }
+        .period .timeline-marker:after {
+            height: 30px;
+            bottom: 0;
+            top: auto;
+        }
+        .period .timeline-title {
+            left: auto;
+        }
+    }
+}
+
+/*----------------------------------------------
+    MOD: MARKER OUTLINE
+----------------------------------------------*/
+
+.marker-outline {
+    .timeline-marker {
+        &:before {
+            background: transparent;
+        }
+    }
+
+    .timeline-item:hover .timeline-marker:before {
+        background: #FF6B6B;
+    }
+}

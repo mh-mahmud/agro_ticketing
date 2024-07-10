@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Ticketing Systems | Create Ticket</title>
+</head>
+<body>
+<!--Dashboard Header-->
+<div class="ts-d-header-area fixed-top">
+    <div class="container-fluid">
+        <div class="ts-d-header-main">
+
+            <div class="ts-ds-logo">
+                <a href="">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+            </div>
+
+            <div class="ts-user">
+                <p>
+                    <span class="ts-user-greetings">Good Evening</span>
+                    <span class="ts-user-name">IBRAHIM</span>
+                    <img class="ts-user-pic" src="assets/images/admin-user.svg" alt="">
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="ts-d-main-area">
+    <!--    Sidebar-->
+    <div class="ts-d-sidebar-area">
+
+        <!--        Profile Avatar-->
+        <div class="ts-d-user-avatar">
+            <img src="assets/images/profile-user.svg" alt="">
+            <span class="ts-d-user-avatar-name">
+                Genuity Systems
+            </span>
+        </div>
+
+
+        <div class="ts-d-sidebar-navigation mt-5">
+            <h6>NAVIGATION</h6>
+            <ul class="ts-d-nav">
+                <li><a class="active" href="dashboard.html"><i class="bi bi-house-door"></i> Dashboard</a></li>
+                <li><a href="profile.html"><i class="bi bi-person-fill"></i> Profile</a></li>
+                <li><a href="create-ticket.html"><i class="bi bi-pip"></i> Ticket</a></li>
+                <li><a href=""><i class="bi bi-bell"></i> Notification <span class="ts-d-notification-no">4</span> </a>
+                </li>
+                <li><a href=""><i class="bi bi-bar-chart-line-fill"></i> Report</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!--    End Sidebar-->
+
+    <!--    Main Content Area-->
+    <div class="ts-d-common-area">
+
+        <!--        Header Components-->
+        <div class="ts-d-top-header mb-2">
+            <div class="ts-d-acc-name">
+                <span class="bi bi-list"></span>
+                <span class="ts-d-acc-name-text text-uppercase">create ticket</span>
+            </div>
+            <!--      <div class="ts-d-date">-->
+            <!--        <input type="text" id="datepicker">-->
+            <!--        <span class="bi bi-filter ts-d-filter"></span>-->
+            <!--      </div>-->
+        </div>
+        <!--       End Header Components-->
+
+
+        <!--        Ticket Area-->
+        <div class="ts-d-tickets-area">
+
+            <div class="ts-d-submenu-area">
+
+
+                <div class="ts-d-left-toolbar ts-d-top-toolbar">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="bi bi-house-door"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="bi bi-ui-checks"></i> My Job
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="bi bi-file-lock"></i> Change Password
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="ts-d-right-toolbar ts-d-top-toolbar">
+                    <ul>
+                        <li>
+                            <a href="open-ticket.html">
+                                <i class="bi bi-folder2-open"></i> Opened Ticket
+                            </a>
+                        </li>
+                        <li>
+                            <a href="close-ticket.html">
+                                <i class="bi bi-folder-x"></i> Close Ticket
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="ts-d-tickets-main">
+                <div class="row pt-5 justify-content-center align-items-center">
+                    <div class="col-lg-5 col-sm-6 text-center">
+                        <h2 class="text-uppercase ts-d-common-header">create tickets</h2>
+                        <p>and try to solve your needs through others.</p>
+
+                        <img src="assets/images/ct-user.svg" alt="">
+
+                    </div>
+                    <div class="col-lg-6 mr-md-auto">
+                        <div class="ts-d-ct-forms">
+                            <form id="ts-d-create-form">
+
+                                <div class="form-group">
+                                    <label for="ts-d-product">
+                                        <select class="form-control" id="ts-d-product">
+                                            <option selected> Product</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class="bi bi-chevron-down"></span>
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ts-d-category">
+                                        <select class="form-control" id="ts-d-category">
+                                            <option selected> Category</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                        <i class="bi bi-star-fill"></i>
+                                        <span class="bi bi-chevron-down"></span>
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ts-d-sub-category">
+                                        <select class="form-control" id="ts-d-sub-category">
+                                            <option selected>Sub Category</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                        <span class="bi bi-chevron-down"></span>
+                                    </label>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="ts-d-ticket-user"></label>
+                                    <input type="text" class="form-control" id="ts-d-ticket-user"
+                                           placeholder="Ticket User ID">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ts-d-subject">
+                                        <input type="text" class="form-control" id="ts-d-subject"
+                                               placeholder="Subject">
+
+                                        <i class="bi bi-star-fill"></i>
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="ts-d-message">
+                                    <textarea rows="5" class="form-control" placeholder="Message" id="ts-d-message">
+                                    </textarea>
+                                        <i class="bi bi-star-fill req-star"></i>
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="ts-d-attachment" for="ts-d-attachment">
+
+                                        <input type="file" name="" id="ts-d-attachment">
+                                        <span class="ts-d-attachment-text">Attachments</span>
+
+                                        <p class="ts-d-attachment-button">
+                                            <span>Attach File</span>
+                                            <span class="bi bi-upload"></span>
+                                        </p>
+                                    </label>
+
+                                </div>
+
+
+                                <div class="col-md-5 mx-md-auto">
+                                    <button class="ts-common-btn" type="submit">create ticket</button>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <!--    End Main Content Area-->
+</div>
+<!--all scripts-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="assets/js/main.js"></script>
+<!--all scripts-->
+</body>
+</html>

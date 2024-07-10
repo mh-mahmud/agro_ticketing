@@ -1,0 +1,1525 @@
+{
+	"info": {
+		"_postman_id": "2d475326-a422-4d5d-a107-3f104572e7b8",
+		"name": "IVR API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Send SMS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"api_token\": \"66cyixgk-yobkjhr2-jkzffnja-kvxauchl-mjqtjlqv\",\r\n \"sid\": \"IFICVR\",\r\n \"msisdn\": \"01730426462\",\r\n \"sms\": \"Message Body 2\",\r\n \"csms_id\": \"4473433434pZ684333392\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://smsplus.sslwireless.com/api/v3/send-sms",
+					"protocol": "https",
+					"host": [
+						"smsplus",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"send-sms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Payment - DESCO",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transaction_id\":\"qweqweqweqweqwewqe\",\r\n\"utility_auth_key\": \"DE16607129080619\",\r\n\"utility_secret_key\": \"OWFs3TSBeCghPYqX\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-payment",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Enquiry - NESCO POSTPAID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"account_no\":\"77010285\",\r\n\"bill_month\":\"12\",\r\n\"bill_year\":\"2020\",\r\n\"transaction_id\":\"qweqweqweqweqwewqa1e2\",\r\n\"utility_auth_key\": \"NE16607129807775\",\r\n\"utility_secret_key\": \"yJ6wGPbkXBm2YIyW\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-info",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Enquiry - NESCO PREPAID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transaction_id\":\"qweqweqweqweqwewqe\",\r\n\"customer_no\":\"33012345\",\r\n\"amount\":\"150\",\r\n\"utility_auth_key\": \"NE16607129972153\",\r\n\"utility_secret_key\": \"KHRZ6dTrri1Xg4jl\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-info",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Utility Service List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.sslwireless.com/api/service-list",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"service-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Enquiry - DESCO",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"billno\":\"111632016458\",\r\n\"transaction_id\":\"qweqweqweqweqwewqe\",\r\n\"utility_auth_key\": \"DE16607129080619\",\r\n\"utility_secret_key\": \"OWFs3TSBeCghPYqX\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-info",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send SMS-Single",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"api_token\": \"66cyixgk-yobkjhr2-jkzffnja-kvxauchl-mjqtjlqv\",\r\n \"sid\": \"IFICVR\",\r\n \"msisdn\":\"01730426462\",\r\n \"sms\": \"This is a Test SMS\",\r\n \"csms_id\": \"4473433434pZ684333392\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://smsplus.sslwireless.com/api/v3/send-sms",
+					"protocol": "https",
+					"host": [
+						"smsplus",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"v3",
+						"send-sms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Payment - NESCO POSTPAID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transaction_id\":\"qweqweqweqweqwewqe\",\r\n\"utility_auth_key\": \"DE16607129080619\",\r\n\"utility_secret_key\": \"OWFs3TSBeCghPYqX\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-payment",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Payment - DPDC",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transaction_id\":\"123123123123123q1231\",\r\n\"pay_channel\":\"4\",\r\n\"bnk_trx_id\":\"1231231231231231231\",\r\n\"utility_auth_key\": \"DP16607129288297\",\r\n\"utility_secret_key\": \"yOaez6gT5Nb4cWob\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-payment",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Cancel- DESCO",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transaction_id\":\"qweqweqweqweqwewqe\",\r\n\"utility_auth_key\": \"DE16607129080619\",\r\n\"utility_secret_key\": \"OWFs3TSBeCghPYqX\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-cancel",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Status- NESCO POSTPAID",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transaction_id\":\"qweqweqweqweqwewqe\",\r\n\"utility_auth_key\": \"DE16607129080619\",\r\n\"utility_secret_key\": \"OWFs3TSBeCghPYqX\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-status",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Status- DESCO",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transaction_id\":\"qweqweqweqweqwewqe\",\r\n\"utility_auth_key\": \"DE16607129080619\",\r\n\"utility_secret_key\": \"OWFs3TSBeCghPYqX\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-status",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Status- DPDC",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transaction_id\":\"123123123123123q1231\",\r\n\"utility_auth_key\": \"DP16607129288297\",\r\n\"utility_secret_key\": \"yOaez6gT5Nb4cWob\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-status",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Cancel- DPDC-Not Working",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"transaction_id\":\"123123123123123q1231\",\r\n\"utility_auth_key\": \"DP16607129288297\",\r\n\"utility_secret_key\": \"yOaez6gT5Nb4cWob\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-cancel",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-cancel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bill Enquiry-DPDC",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "text"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"stkid\":\"IFIC\",\r\n\"account_no\":\"10464539\",\r\n\"bill_years\":\"2021\",\r\n\"bill_months\":\"02\",\r\n\"pay_channel\":\"4\",\r\n\"transaction_id\":\"123123123123123q1231\",\r\n\"utility_auth_key\": \"DP16607129288297\",\r\n\"utility_secret_key\": \"yOaez6gT5Nb4cWob\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-info",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chequebook Activation-CBR-1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<CbrRequest>\r\n<Credential>\r\n<UserID>ific_cust_ex</UserID>\r\n<Password>123456</Password>\r\n</Credential>\r\n<CbrDetail>\r\n<TransactionID>123456789</TransactionID>\r\n<AccountNumber>0170264050811</AccountNumber>\r\n<ChequeBookType>CAK</ChequeBookType>\r\n<Maker>e050</Maker>\r\n<Checker>e050</Checker>\r\n</CbrDetail>\r\n</CbrRequest>"
+				},
+				"url": {
+					"raw": "http://10.124.9.20:9082/custex2cbsapi/ChequeBook/Cbr",
+					"protocol": "http",
+					"host": [
+						"10",
+						"124",
+						"9",
+						"20"
+					],
+					"port": "9082",
+					"path": [
+						"custex2cbsapi",
+						"ChequeBook",
+						"Cbr"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chequebook Activation-CBI-2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<CbiRequest>\r\n<Credential>\r\n<UserID>ific_cust_ex</UserID>\r\n<Password>123456</Password>\r\n</Credential>\r\n<CbiDetail>\r\n<TransactionID>123456789</TransactionID>\r\n<AccountNumber>0000278972811</AccountNumber>\r\n<ChequeBookType>CAK</ChequeBookType>\r\n<FirstSerial>25607605</FirstSerial>\r\n<NumberOfPage>20</NumberOfPage>\r\n<Maker>e050</Maker>\r\n<Checker>e050</Checker>\r\n</CbiDetail>\r\n</CbiRequest>"
+				},
+				"url": {
+					"raw": "http://10.124.9.20:9082/custex2cbsapi/ChequeBook/Cbi",
+					"protocol": "http",
+					"host": [
+						"10",
+						"124",
+						"9",
+						"20"
+					],
+					"port": "9082",
+					"path": [
+						"custex2cbsapi",
+						"ChequeBook",
+						"Cbi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Information By Mobile/Email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<CustomerEnquiryInfoByPhoneEmailRequest>\r\n\t<Credential>\r\n\t\t<UserID>omniapi</UserID>\r\n\t\t<Password>omniapi@123</Password>\r\n\t</Credential>\r\n\t<PhoneNumber>01717849745</PhoneNumber>\r\n\t<Email></Email>\r\n</CustomerEnquiryInfoByPhoneEmailRequest>",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.124.9.20:9094/omnichannelapi/CustomerEnquiryByPhone/GetInfo",
+					"protocol": "http",
+					"host": [
+						"10",
+						"124",
+						"9",
+						"20"
+					],
+					"port": "9094",
+					"path": [
+						"omnichannelapi",
+						"CustomerEnquiryByPhone",
+						"GetInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account Details by Customer ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<CustomerEnquiryInfoByCustomerIDRequest>\r\n    <Credential> \r\n        <UserID>omniapi</UserID> \r\n        <Password>omniapi@123</Password> \r\n    </Credential> \r\n    <CustomerID>636479</CustomerID>\r\n</CustomerEnquiryInfoByCustomerIDRequest>\r\n"
+				},
+				"url": {
+					"raw": "10.124.9.20:9094/omnichannelapi/CustomerEnquiryByCustomerID/GetInfo",
+					"host": [
+						"10",
+						"124",
+						"9",
+						"20"
+					],
+					"port": "9094",
+					"path": [
+						"omnichannelapi",
+						"CustomerEnquiryByCustomerID",
+						"GetInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account Enquiry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<CustomerEnquiryInfoByAccountRequest>\r\n\t<Credential>\r\n\t\t<UserID>ific_cust_ex</UserID>\r\n\t\t<Password>123456</Password>\r\n\t</Credential>\r\n\t<AccountNumber>0000278972811812</AccountNumber>\r\n</CustomerEnquiryInfoByAccountRequest>"
+				},
+				"url": {
+					"raw": "http://10.124.9.20:9082/custex2cbsapi/CustomerEnquiryByAccount/GetInfo",
+					"protocol": "http",
+					"host": [
+						"10",
+						"124",
+						"9",
+						"20"
+					],
+					"port": "9082",
+					"path": [
+						"custex2cbsapi",
+						"CustomerEnquiryByAccount",
+						"GetInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PSS Issuance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<PssRequest>\r\n\t<Credential>\r\n\t\t<UserID>ific_cust_ex</UserID>\r\n\t\t<Password>123456</Password>\r\n\t</Credential>\r\n\t<PssDetail>\r\n\t\t<TransactionID>369258147123456785</TransactionID>\r\n\t\t<DealType>PSS</DealType>\r\n\t\t<AccountNumber>0000278972811</AccountNumber>\r\n\t\t<DealPeriod>10Y</DealPeriod>\r\n\t\t<Amount>999</Amount>\r\n\t</PssDetail>\r\n</PssRequest>"
+				},
+				"url": {
+					"raw": "http://192.168.3.75:9082/custex2cbsapi/PSS/Issuance",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"3",
+						"75"
+					],
+					"port": "9082",
+					"path": [
+						"custex2cbsapi",
+						"PSS",
+						"Issuance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FDR issuance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<FdrRequest>\r\n<Credential>\r\n<UserID>ific_cust_ex</UserID>\r\n<Password>123456</Password>\r\n</Credential>\r\n<FdrDetail>\r\n<TransactionID>369258147d12345676</TransactionID>\r\n<DealType>FD3</DealType>\r\n<AccountNumber>0170287518811</AccountNumber>\r\n<DealPeriod>3M</DealPeriod>\r\n<Amount>2000</Amount>\r\n</FdrDetail>\r\n</FdrRequest>"
+				},
+				"url": {
+					"raw": "http://192.168.3.75:9082/custex2cbsapi/FDR/Issuance",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"3",
+						"75"
+					],
+					"port": "9082",
+					"path": [
+						"custex2cbsapi",
+						"FDR",
+						"Issuance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fund Transfer & Bill Payment Accounting",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<TransactionRequest>\r\n\t<Credential>\r\n\t\t<UserID>comapi</UserID>\r\n\t\t<Password>comapi@123</Password>\r\n\t</Credential>\r\n\t<Transaction>\r\n\t\t<BatchID>$DPC</BatchID>\r\n\t\t<ReferenceNo>1234568</ReferenceNo>\r\n\t\t<Maker>H043</Maker>\r\n\t\t<Checker>H043</Checker>\r\n\t\t<Account1></Account1>\r\n\t\t<TrCode1>020</TrCode1>\r\n\t\t<Amount1>100</Amount1>\r\n\t\t<Account2></Account2>\r\n\t\t<TrCode2></TrCode2>\r\n\t\t<Amount2></Amount2>\r\n\t\t<Currency>BDT</Currency>\r\n\t\t<TrType>T</TrType>\r\n\t\t<CheckSerialNo></CheckSerialNo>\r\n\t\t<Nar1ForAccount1></Nar1ForAccount1>\r\n\t\t<Nar4ForAccount1></Nar4ForAccount1>\r\n\t\t<Nar1ForAccount2></Nar1ForAccount2>\r\n\t\t<Nar4ForAccount2></Nar4ForAccount2>\r\n\t\t<ServiceUserID>dpclive</ServiceUserID>\r\n\t\t<CompanyID>dpdc</CompanyID>\r\n\t\t<UniqueID>1111111111111111</UniqueID>\r\n\t\t<Mode>N</Mode>\r\n\t</Transaction>\r\n</TransactionRequest>"
+				},
+				"url": {
+					"raw": "http://10.124.9.20:9092/CommonAPI/Transaction/Request",
+					"protocol": "http",
+					"host": [
+						"10",
+						"124",
+						"9",
+						"20"
+					],
+					"port": "9092",
+					"path": [
+						"CommonAPI",
+						"Transaction",
+						"Request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Statement Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "accountNumber",
+							"value": "0170264050811",
+							"type": "default"
+						},
+						{
+							"key": "frmDate",
+							"value": "01-01-22",
+							"type": "default"
+						},
+						{
+							"key": "toDate",
+							"value": "31-12-2022",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.152:8081/statement-engine/statementapi.php",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"152"
+					],
+					"port": "8081",
+					"path": [
+						"statement-engine",
+						"statementapi.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deal Enquiry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "AUTH_KEY",
+							"value": "abcde12345",
+							"type": "default"
+						},
+						{
+							"key": "FUNDING_ACC",
+							"value": "0170264050811",
+							"type": "default"
+						},
+						{
+							"key": "TERMDEAL_TYPE",
+							"value": "D",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://10.124.9.23/dps-inquiry-api/",
+					"protocol": "http",
+					"host": [
+						"10",
+						"124",
+						"9",
+						"23"
+					],
+					"path": [
+						"dps-inquiry-api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Loan Enquiry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "AUTH_KEY",
+							"value": "abcde12345",
+							"type": "default"
+						},
+						{
+							"key": "FUNDING_ACC",
+							"value": "0170264050811",
+							"type": "default"
+						},
+						{
+							"key": "TERMDEAL_TYPE",
+							"value": "L",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://10.124.9.23/dps-inquiry-api/",
+					"protocol": "http",
+					"host": [
+						"10",
+						"124",
+						"9",
+						"23"
+					],
+					"path": [
+						"dps-inquiry-api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Static Data Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope\r\n    xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n    xmlns:web=\"http://webservices.bankfusion.trapedza.com\"\r\n    xmlns:att=\"http://www.misys.com/bankfusion/attributes\">\r\n    <soapenv:Header>\r\n        <web:bfgenericsoapheader>\r\n            <!--Optional:-->\r\n            <web:authentication>\r\n                <web:userName>brad</web:userName>\r\n                <web:password>Part@567</web:password>\r\n                <!--Optional:-->\r\n                <web:passCode></web:passCode>\r\n                <!--Optional:-->\r\n                <web:userLocator></web:userLocator>\r\n                <!--Optional:-->\r\n                <web:casRestletUrl></web:casRestletUrl>\r\n                <!--Optional:-->\r\n                <web:casValidateUrl></web:casValidateUrl>\r\n            </web:authentication>\r\n            <web:BFHeader>\r\n                <!--Optional:-->\r\n                <att:correlationID></att:correlationID>\r\n                <!--Optional:-->\r\n                <att:zone></att:zone>\r\n                <att:autoAuthorize></att:autoAuthorize>\r\n                <!--Optional:-->\r\n                <att:applicationContext></att:applicationContext>\r\n                <!--Zero or more repetitions:-->\r\n                <att:cachedBPMUsers></att:cachedBPMUsers>\r\n                <!--Optional:-->\r\n                <att:destination></att:destination>\r\n                <!--Optional:-->\r\n                <att:extension/>\r\n            </web:BFHeader>\r\n        </web:bfgenericsoapheader>\r\n    </soapenv:Header>\r\n    <soapenv:Body>\r\n        <web:PT_PFN_MaintainPartyWS_SRV>\r\n            <web:requestPayload>\r\n                <!--Optional:-->\r\n                <rqParam>\t\t\r\n                \r\nUNIQUE_ID=Web2;\r\nPT_PFN_Party#PARTYID=357575;\r\nPT_PFN_PersonalDetails#FATHERSNAME=Test;\r\nUDFEXTPT_PFN_PartyHostExtn#UDF_CUN=ABU SADNUR AL TAUSIF AHMED;\r\nPT_PFN_Party#SHORTNAME=TAUSIF;\r\n{PT_PFN_AddressLink#ADDRESSTYPE=EQPRIME;\r\nPT_PFN_Address#ADDRESSLINE1= MotijheelDhaka;\r\nPT_PFN_Address#ADDRESSLINE2=;\r\nPT_PFN_Address#ADDRESSLINE3=;\r\nPT_PFN_Address#ADDRESSLINE4=;\r\nPT_PFN_AddressLink#ISDEAFULTADDRESS=Y;\r\nPT_PFN_Address#COUNTRYCODE=BD;}{\r\nPT_PFN_PersonNames#FIRSTNAME=ABU SADNUR AL;\r\nPT_PFN_PersonNames#MIDDLENAME=;\r\nPT_PFN_PersonNames#LASTNAME=TAUSIF AHMED;}\r\n{PT_PFN_PartyLineOfBusiness#LINEOFBUSINESS=COREBANKING;}\r\nPT_PFN_PartyLocality#LOCALITYTYPEID=LOCALPUBLIC;\r\n\r\n            </rqParam>\r\n                <!--Optional:-->\r\n                <controlParam>DEDUP_REQD=N;TXN_COMMIT_LEVEL=A;\r\nGEN_CODE_VALDN_REQ=Y;PARTY_ACTION=A\r\n</controlParam>\r\n            </web:requestPayload>\r\n        </web:PT_PFN_MaintainPartyWS_SRV>\r\n    </soapenv:Body>\r\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "http://10.124.3.67:2100/bfweb/services/PT_PFN_MaintainPartyWS_SRVWS?wsdl",
+					"protocol": "http",
+					"host": [
+						"10",
+						"124",
+						"3",
+						"67"
+					],
+					"port": "2100",
+					"path": [
+						"bfweb",
+						"services",
+						"PT_PFN_MaintainPartyWS_SRVWS"
+					],
+					"query": [
+						{
+							"key": "wsdl",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dormant A/C Activation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<AccountActivationRequest>\r\n<Credential>\r\n<UserID>ific_cust_ex</UserID>\r\n<Password>ces@2021</Password>\r\n</Credential>\r\n<AccountActivationDetail>\r\n<TransactionID>123456789</TransactionID>\r\n<AccountNumber>0170264050811</AccountNumber>\r\n<Maker>e050</Maker>\r\n<Checker>e050</Checker>\r\n</AccountActivationDetail>\r\n</AccountActivationRequest>"
+				},
+				"url": {
+					"raw": "http://192.168.1.76:9082/custex2cbsapi/SpecialCondition/AccountActivation",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"76"
+					],
+					"port": "9082",
+					"path": [
+						"custex2cbsapi",
+						"SpecialCondition",
+						"AccountActivation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS Enquiry Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Key",
+						"value": "#b8%ftUnnaMJPJ8MKbpG79OFAtNppW@RBMqap8KlVMEAfhDPwwspaJ&HdQoFM153",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mobile\":\"01730426462\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.32/mbm/public/api/mbm/subscription/enquiry",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"32"
+					],
+					"path": [
+						"mbm",
+						"public",
+						"api",
+						"mbm",
+						"subscription",
+						"enquiry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS Update Subscription Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Key",
+						"value": "lduBAYb7s@lg&5Nv5Ty6&e7^Md$#RAe!InY&&rFo!@!OdKj4YQ72KEMfnVNf22ba",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\": \"HQ4050\",\n    \"account_number\": \"0170264050811\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.32/mbm/public/api/mbm/subscription/update-subscription",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"32"
+					],
+					"path": [
+						"mbm",
+						"public",
+						"api",
+						"mbm",
+						"subscription",
+						"update-subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Chequebook, SMS, DC, Debit Card Requisition",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Y2VzLWlmaWM6Q2VzIUlmSWNANzg2"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "AccountNumber",
+							"value": "0170264050903",
+							"type": "text"
+						},
+						{
+							"key": "CustomerID",
+							"value": "HQ4050",
+							"type": "text"
+						},
+						{
+							"key": "PartyID",
+							"value": "HQ4050",
+							"type": "text"
+						},
+						{
+							"key": "CustomerName",
+							"value": "MD. KHALEED HASSAN",
+							"type": "text"
+						},
+						{
+							"key": "CustomerType",
+							"value": "EA",
+							"type": "text"
+						},
+						{
+							"key": "AccountType",
+							"value": "CA",
+							"type": "text"
+						},
+						{
+							"key": "BranchCode",
+							"value": "7065",
+							"type": "text"
+						},
+						{
+							"key": "MobileCountryCode",
+							"value": "BD",
+							"type": "text"
+						},
+						{
+							"key": "MobileNumber",
+							"value": "01701459895",
+							"type": "text"
+						},
+						{
+							"key": "DateOfBirth",
+							"value": "01-07-1992",
+							"type": "text"
+						},
+						{
+							"key": "Operation",
+							"value": "NDC###CHKBOOK###SMS###DCHEN",
+							"type": "text"
+						},
+						{
+							"key": "NameOnCard",
+							"value": "KHALEED HASSAN",
+							"type": "text"
+						},
+						{
+							"key": "FatherName",
+							"value": "MOINUL HASSAN",
+							"type": "text"
+						},
+						{
+							"key": "MotherName",
+							"value": "KHALEDA HASSAN",
+							"type": "text"
+						},
+						{
+							"key": "DeliveryType",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "DeliveryBranchCode",
+							"value": "8500",
+							"type": "text"
+						},
+						{
+							"key": "NationalID",
+							"value": "1234567890",
+							"type": "text"
+						},
+						{
+							"key": "NameOnChequeBook",
+							"value": "KHALEED HASSAN",
+							"type": "text"
+						},
+						{
+							"key": "NoOfChequeBook",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": " NoOfLeafs",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://192.168.1.203/ces/api/save_ekyc_request",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"203"
+					],
+					"path": [
+						"ces",
+						"api",
+						"save_ekyc_request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS Update Mobile Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Key",
+						"value": "#b8%ftUnnaMJPJ8MKbpG79OFAtNppW@RBMqap8KlVMEAfhDPwwspaJ&HdQoFM153",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"current_mobile\": \"01715585835\",\n    \"new_mobile\": \"01715585858\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.32/mbm/public/api/mbm/subscription/update-mobile",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"32"
+					],
+					"path": [
+						"mbm",
+						"public",
+						"api",
+						"mbm",
+						"subscription",
+						"update-mobile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Party",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope\r\n    xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\r\n    xmlns:web=\"http://webservices.bankfusion.trapedza.com\"\r\n    xmlns:att=\"http://www.misys.com/bankfusion/attributes\">\r\n    <soapenv:Header>\r\n        <web:bfgenericsoapheader>\r\n            <!--Optional:-->\r\n            <web:authentication>\r\n                <web:userName>brad</web:userName>\r\n                <web:password>Part@567</web:password>\r\n                <!--Optional:-->\r\n                <web:passCode></web:passCode>\r\n                <!--Optional:-->\r\n                <web:userLocator></web:userLocator>\r\n                <!--Optional:-->\r\n                <web:casRestletUrl></web:casRestletUrl>\r\n                <!--Optional:-->\r\n                <web:casValidateUrl></web:casValidateUrl>\r\n            </web:authentication>\r\n            <web:BFHeader>\r\n                <!--Optional:-->\r\n                <att:correlationID></att:correlationID>\r\n                <!--Optional:-->\r\n                <att:zone></att:zone>\r\n                <att:autoAuthorize></att:autoAuthorize>\r\n                <!--Optional:-->\r\n                <att:applicationContext></att:applicationContext>\r\n                <!--Zero or more repetitions:-->\r\n                <att:cachedBPMUsers></att:cachedBPMUsers>\r\n                <!--Optional:-->\r\n                <att:destination></att:destination>\r\n                <!--Optional:-->\r\n                <att:extension/>\r\n            </web:BFHeader>\r\n        </web:bfgenericsoapheader>\r\n    </soapenv:Header>\r\n<soapenv:Body>\r\n<web:CB_PTY_ReadPartyDetailsWS_SRV>\r\n<web:requestPayload>\r\n<controlParam>ReadLevel=E;</controlParam>\r\n<rqParam>\r\nUNIQUE_ID=Web2; \r\nPARTYID=HQ4050;\r\n</rqParam>\r\n</web:requestPayload>\r\n</web:CB_PTY_ReadPartyDetailsWS_SRV>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>"
+				},
+				"url": {
+					"raw": "http://10.124.3.67:2100/bfweb/services/CB_PTY_ReadPartyDetailsWS_SRVWS?wsdl",
+					"protocol": "http",
+					"host": [
+						"10",
+						"124",
+						"3",
+						"67"
+					],
+					"port": "2100",
+					"path": [
+						"bfweb",
+						"services",
+						"CB_PTY_ReadPartyDetailsWS_SRVWS"
+					],
+					"query": [
+						{
+							"key": "wsdl",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SMS Enroll/Disenroll Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Key",
+						"value": "lduBAYb7s@lg&5Nv5Ty6&e7^Md$#RAe!InY&&rFo!@!OdKj4YQ72KEMfnVNf22ba",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"operation\": \"disenroll\",\n   \"account_number\":\"0170264050811\"\n   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.32/mbm/public/api/mbm/subscription/enroll-or-disenroll",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"32"
+					],
+					"path": [
+						"mbm",
+						"public",
+						"api",
+						"mbm",
+						"subscription",
+						"enroll-or-disenroll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Service List-Bill Payment",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "default"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://api.sslwireless.com/api/service-list",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"service-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DPDC Bill Info",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICCARE",
+						"type": "default"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"stkid\":\"IFIC\",\r\n\"account_no\":\"10026551\",\r\n\"bill_years\":\"2021\",\r\n\"bill_months\":\"02\",\r\n\"pay_channel\":\"4\",\r\n\"transaction_id\":\"12331231231233123123\",\r\n\"utility_auth_key\": \"DP16607129288297\",\r\n\"utility_secret_key\": \"yOaez6gT5Nb4cWob\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-info",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DPDC Bill Payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "STK-CODE",
+						"value": "IFICcare",
+						"type": "default"
+					},
+					{
+						"key": "AUTH-KEY",
+						"value": "g5BL7tFR19ShrOV37AR0d.Bp6WaD7gTR",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"stkid\":\"IFIC\",\r\n\"transaction_id\":\"12331231231233a123123\",\r\n\"pay_channel\":\"2\",\r\n\"bnk_trx_id\":\"12331231231233\",\r\n\"utility_auth_key\": \"DP16607129288297\",\r\n\"utility_secret_key\": \"yOaez6gT5Nb4cWob\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.sslwireless.com/api/bill-payment",
+					"protocol": "https",
+					"host": [
+						"api",
+						"sslwireless",
+						"com"
+					],
+					"path": [
+						"api",
+						"bill-payment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Last 5 Debit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<request>\r\n<header>\r\n<userID>IVR</userID>\r\n<password>ivr@321</password>\r\n</header>\r\n<account>0170264050811</account>\r\n</request>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.76:8085/drtransactions/getinfo",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"76"
+					],
+					"port": "8085",
+					"path": [
+						"drtransactions",
+						"getinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Last 5 Credit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<request>\r\n<header>\r\n<userID>IVR</userID>\r\n<password>ivr@321</password>\r\n</header>\r\n<account>0170264050811</account>\r\n</request>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.76:8085/crtransactions/getinfo",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"76"
+					],
+					"port": "8085",
+					"path": [
+						"crtransactions",
+						"getinfo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

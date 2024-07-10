@@ -1,0 +1,950 @@
+//End All Mixins For Tickets
+
+.ts-d-submenu-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.ts-d-top-toolbar {
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            float: left;
+            list-style: none;
+            margin: 0 1rem;
+        }
+
+        li {
+            a {
+                font-family: 'Raleway', sans-serif;
+                text-decoration: none;
+                font-size: 1rem;
+                color: #4d4d4d;
+                font-weight: 500;
+                transition: all 0.3s ease-in-out;
+                display: block;
+                width: 100%;
+
+                &:hover {
+                    color: $brand-color;
+                }
+            }
+        }
+    }
+}
+
+
+.ts-d-tickets-main {
+    min-height: calc(100vh - 115px);
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(7, 152, 255, 0.12);
+}
+
+
+//Form Styling
+#ts-d-create-form {
+    label {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        position: relative;
+        align-items: center;
+
+        i.bi {
+            font-size: 8px;
+            color: #FF6060;
+            margin-right: 0.2rem;
+            vertical-align: middle;
+        }
+
+        i.bi.req-star {
+            left: 0.5rem;
+            font-size: 10px;
+            color: #FF6060;
+        }
+
+        span.bi-chevron-down {
+            position: absolute;
+            right: 1rem;
+            color: #4d4d4d;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 600;
+
+        }
+    }
+
+    .form-control {
+        background-color: #F5F7FC;
+        padding: 1.1rem;
+        border: none;
+        height: auto;
+        font-size: 0.9rem;
+        line-height: 1.4rem;
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 5px;
+    }
+
+    select.form-control {
+        option {
+            color: #4d4d4d;
+            font-weight: 600;
+            font-family: "Raleway", sans-serif;
+            text-transform: capitalize;
+            display: inline-block;
+        }
+    }
+
+    .form-control {
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #bfbfbf;;
+            font-family: "Raleway", sans-serif;
+            text-transform: capitalize;
+        }
+
+        &::-moz-placeholder { /* Firefox 19+ */
+            color: #4d4d4d;
+            font-weight: 600;
+            font-family: "Raleway", sans-serif;
+            text-transform: capitalize;
+        }
+
+        &:-ms-input-placeholder { /* IE 10+ */
+            color: #4d4d4d;
+            font-weight: 600;
+            font-family: "Raleway", sans-serif;
+            text-transform: capitalize;
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+            color: #4d4d4d;
+            font-weight: 600;
+            font-family: "Raleway", sans-serif;
+            text-transform: capitalize;
+        }
+    }
+
+    textarea.form-control {
+        background-color: #F5F7FC;
+        padding: 1.4rem 1.5rem;
+        border: none;
+        height: auto;
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+
+}
+
+
+//Input File
+#ts-d-create-form {
+    padding-bottom: 2rem;
+
+    .form-group {
+        label[for=ts-d-attachment] {
+            background-color: #F5F7FC;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            position: relative;
+            height: 60px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type=file] {
+            position: absolute;
+            visibility: hidden;
+            opacity: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 3;
+        }
+
+        .ts-d-attachment-text {
+            display: inline-block;
+            color: #4d4d4d;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+    }
+
+    .ts-d-attachment-button {
+        position: relative;
+        z-index: 2;
+        float: right;
+        border: none;
+        background-color: #ffffff;
+        padding: 0.5rem 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s ease-in-out;
+        margin: 0;
+
+        span {
+            transition: all 0.4s ease;
+            color: #4d4d4d;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        span.bi-upload {
+            margin-left: 2rem;
+            display: inline-block;
+        }
+
+        &:hover {
+            background-color: $brand-color;
+
+            span {
+                color: #ffffff;
+            }
+        }
+    }
+
+
+}
+
+/*New Button For Create Contact => @mominriyadh 7/12/2022*/
+
+.ts-create-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > div {
+        flex-grow: 1;
+        max-width: 92%;
+        width: 100%;
+        @media all and (max-width: 768px) {
+            max-width: 85%;
+        }
+
+        .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+
+    .ts-create-contact-button {
+        width: 8%;
+        flex-shrink: 0;
+        @media all and (max-width: 768px) {
+            width: 15%;
+        }
+
+        button {
+            position: relative;
+            background-color: $brand-color;
+            border: none;
+            top: 15px;
+            color: #ffffff;
+            padding: 0.2rem;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            width: 100%;
+            height: 54px;
+
+            i{
+                font-size: 2rem;
+                position: relative;
+                top:2px;
+            }
+        }
+    }
+}
+
+//Form Plugins Overwrite
+#ts-d-create-form {
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+        position: relative;
+        background-color: #F5F7FC;
+        border: none;
+        border-radius: 5px;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+
+    textarea {
+        background-color: #F5F7FC;
+        border-radius: 5px;
+        border: 0;
+    }
+
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+        width: 100%;
+        height: 55px;
+        padding: 0 11px;
+    }
+
+    .ant-select-single:not(.ant-select-customize-input) .ant-select-selector .ant-select-selection-search-input {
+        height: 55px;
+    }
+
+
+    .ant-select-single.ant-select-show-arrow .ant-select-selection-item, .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+        padding-right: 18px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .ts-d-input-fix {
+        .ant-select-single .ant-select-selector .ant-select-selection-item, .ant-select-single .ant-select-selector .ant-select-selection-placeholder .demo-option-label-item {
+            padding: 0;
+            transition: all 0.3s;
+            line-height: 1.4;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+    }
+
+    //Summernote
+    .ts-d-textarea-fix {
+        .note-editor.note-frame, .note-editor.note-airframe {
+            border: 1px solid transparent;
+            background-color: #F5F7FC;
+            border-radius: 5px;
+        }
+
+        .note-popover .popover-content, .note-editor .note-toolbar {
+            padding: 0 0 5px 5px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            margin: 5px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+        }
+
+        //Fixme => Overwrite Class (Ticket FormJS)
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .note-editable {
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+}
+
+//Ticket Form Attach Files
+.ts-d-attach-file-list {
+    column-count: 2;
+    column-gap: 30px;
+    column-rule: 1px solid #F5F7FC;
+    break-after: avoid;
+}
+
+.ts-d-show-attach-files {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F7FC;
+    color: #484848;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    break-inside: avoid-column;
+
+    span {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 80%;
+    }
+
+    span:last-child {
+        cursor: pointer;
+        background-color: #ff6060;
+        border-radius: 50%;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 12px;
+        vertical-align: baseline;
+        line-height: 20px;
+    }
+}
+
+
+//End Ticket Form Attach Files
+
+
+//Tickets Overview
+.ts-d-holiday-search-area {
+    @include bg-white;
+
+    .ts-d-holiday-search-main {
+        background-color: #f6f6f6;
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        @media all and (max-width: 600px) {
+            padding: 1rem;
+        }
+
+        .ant-select-single .ant-select-selector .ant-select-selection-item, .ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+            padding: 0;
+            line-height: 38px;
+            transition: all 0.3s;
+        }
+    }
+
+    .ant-picker {
+        border-radius: 5px;
+        transition: border 0.3s, box-shadow 0.3s;
+        flex-grow: 1;
+    }
+
+    .ant-picker-input > input {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        padding: 4px 11px;
+        color: rgba(0, 0, 0, 0.85);
+        font-size: 14px;
+        line-height: 1.5715;
+        background-color: #fff;
+        background-image: none;
+        border-radius: 2px;
+        transition: all 0.3s;
+        flex: auto;
+        min-width: 1px;
+        height: 35px;
+        border: 0;
+    }
+
+    .ant-btn-icon-only {
+        width: 45px;
+        height: 45px;
+        padding: 2.4px 0;
+        font-size: 16px;
+        border-radius: 5px;
+        vertical-align: -3px;
+    }
+}
+
+.ts-d-search-area {
+    @include bg-white;
+    margin: 0 10px;
+    padding: 2rem 3rem;
+    position: relative;
+    @media all and (max-width: 600px) {
+        padding: 10px;
+    }
+}
+
+.ts-d-search-area {
+    /*Overwrite Class => AutoSearch.js*/
+    .ant-input-affix-wrapper {
+        padding: 15px 10px;
+        border-radius: 5px;
+        background-color: #f5f7fc;
+        border: none;
+    }
+
+    .ant-input-affix-wrapper > input.ant-input {
+        padding: 0;
+        border: none;
+        outline: none;
+        background: transparent;
+    }
+
+    .ant-select-single.ant-select-customize-input .ant-select-selector .ant-select-selection-placeholder {
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0 11px;
+    }
+
+}
+
+
+.ts-d-search-area {
+    margin: 0 10px;
+
+    form#ts-d-search {
+        padding: 1.5rem 3rem;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background-color: #F5F7FC;
+        border-radius: 10px;
+    }
+
+    form#ts-d-search {
+        input[type=search] {
+            flex-grow: 1;
+            border: 0;
+            background-color: transparent;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #4d4d4d;
+            padding: 0.6rem 0;
+
+
+            &:hover {
+                border: none;
+            }
+
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+
+            &:focus-visible {
+                border: none;
+                outline: none;
+            }
+        }
+    }
+
+    form#ts-d-search {
+        .ts-d-search-btn {
+            transition: all 0.4s ease-in-out;
+            border: none;
+            background-color: #0DC3F8;
+            padding: 0.5rem 1.6rem;
+            color: #ffffff;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 0 20px rgba(13, 195, 248, 0.3);
+
+            &:hover {
+                background-color: darken(#0DC3F8, 15%);
+            }
+        }
+    }
+}
+
+//Pagination
+.ts-d-pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.page-navigation {
+    position: relative; /* new */
+    left: 50%;
+    transform: translateX(-50%);
+
+    .page-link {
+        color: $brand-color;
+        font-weight: bold;
+    }
+}
+
+
+.ts-d-custom-select {
+    margin-left: 10px;
+    display: inline-block;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    padding: 2px;
+    box-shadow: 0 0 5px 1px rgba(7, 152, 255, 0.12);
+}
+
+
+//Tickets
+.ts-ticket-buttons-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ts-d-ticket {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(7, 152, 255, 0.12);
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    width: calc(50% - 30px);
+    margin: 10px 10px 15px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    background-color: #ffffff;
+    @media all and (max-width: 600px) {
+        width: calc(100% - 30px);
+        margin: 10px 10px 15px;
+    }
+}
+
+.ts-d-ticket {
+    span.ts-d-ticket-no {
+        color: #6C757D;
+        font-size: 26px;
+        font-family: $nunito;
+        font-weight: 700;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.16);
+    }
+}
+
+.ts-d-ticket-header {
+    display: flex;
+    justify-content: space-between;
+
+    .ts-ticket-icon {
+        padding: 10px 12px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+}
+
+//Color Classes
+.ts-icon-blue {
+    background: rgba(0, 112, 225, 0.25);
+    color: rgba(0, 112, 225, 1);
+}
+
+.ts-icon-sky {
+    background: rgba(13, 195, 248, 0.25);
+    color: rgba(13, 195, 248, 1);
+}
+
+.ts-icon-pink {
+    background: rgba(255, 96, 96, 0.25);
+    color: rgba(255, 96, 96, 1);
+}
+
+.ts-icon-green {
+    background: rgba(26, 188, 56, 0.25);
+    color: rgba(26, 188, 56, 1);
+}
+
+.ts-d-ticket {
+    p {
+        margin-bottom: 0;
+        font-size: 13px;
+    }
+}
+
+.ts-roi-plus {
+    color: #00C486;
+    font-family: $nunito;
+    font-size: 16px;
+    font-weight: 600;
+
+    i {
+        transform: rotate(-90deg);
+        display: inline-block;
+    }
+}
+
+.ts-roi-minus {
+    color: #FF6060;
+    font-family: $nunito;
+    font-size: 16px;
+    font-weight: 600;
+
+    i {
+        transform: rotate(90deg);
+        display: inline-block;
+    }
+}
+
+.ts-d-ticket-btn {
+    width: 100%;
+    height: 100%;
+}
+
+//Work Process Table
+.ts-d-workprocess-table-area {
+    @include bg-white;
+    margin: 0 10px;
+}
+
+/*===============================
+      Open Tickets Search Table
+  ===============================*/
+.ts-d-open-ticket-area {
+    margin: 0 -15px;
+}
+
+.ts-d-open-ticket-col {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    @media all and (max-width: 1024px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.ts-d-open-ticket-table-area {
+    @include bg-white;
+    width: 100%;
+    min-width: calc(100% - (250px + 280px));
+    flex-grow: 1;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+
+//Plugins overwrite
+.ts-d-open-ticket-table-main {
+    .rdt_TableHeadRow {
+        background-color: #aceafd;
+        color: #4d4d4d;
+        font-weight: 600;
+        font-size: 1rem;
+        justify-content: center;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+}
+
+
+/*============================
+       Table Search Filter
+  ============================*/
+.ts-d-table-search-filter {
+    @include bg-white;
+    margin-left: 30px;
+    flex-shrink: 0;
+    width: 280px;
+    flex-basis: 280px;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    /*Filter Toggle Class*/
+    &.add-filter {
+        transform: translateX(150%);
+        opacity: 0;
+        visibility: hidden;
+        width: 250px;
+        margin-left: -280px;
+        @media all and (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    @media all and (max-width: 1024px) {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+}
+
+
+.ts-d-table-s-f-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ts-status-main-expired {
+    background-color: #eb1313;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 5px;
+    height: 40px;
+
+    span:nth-of-type(1) {
+        color: #ffffff;
+    }
+}
+
+.ts-status-main-pending {
+    background-color: #f75c1e;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 5px;
+    height: 40px;
+
+    span:nth-of-type(1) {
+        color: #ffffff;
+    }
+}
+
+.ts-status-main-process {
+    background-color: #914900;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 5px;
+    height: 40px;
+
+    span:nth-of-type(1) {
+        color: #ffffff;
+    }
+}
+
+.ts-status-main-initial {
+    background-color: #1abc9c;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 5px;
+    height: 40px;
+
+    span:nth-of-type(1) {
+        color: #ffffff;
+    }
+}
+
+
+//End Table Search Filter
+
+.ts-workprocess-table-header, .ts-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+
+        .bi-three-dots-vertical {
+            transition: all 0.4s ease-in-out;
+            display: inline-block;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            vertical-align: middle;
+            padding-top: 4px;
+
+            &:hover {
+                background-color: #efefef;
+            }
+        }
+    }
+}
+
+.ts-status-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//Done
+span.ts-status-done {
+    background-color: #6af5b5;
+    height: 40px;
+    width: 10px;
+    display: inline-block;
+}
+
+span.ts-status-text-done {
+    font-weight: bold;
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    width: 130px;
+}
+
+//Expired
+span.ts-status-expired {
+    background-color: #878787;
+    height: 40px;
+    width: 10px;
+    display: inline-block;
+}
+
+span.ts-status-text-expired {
+    font-weight: bold;
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    width: 130px;
+}
+
+//Pending
+span.ts-status-pending {
+    background-color: #FF6B6B;
+    height: 40px;
+    width: 10px;
+    display: inline-block;
+}
+
+span.ts-status-text-pending {
+    font-weight: bold;
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    width: 130px;
+}
+
+//Process
+span.ts-status-process {
+    background-color: #ffa600;
+    height: 40px;
+    width: 10px;
+    display: inline-block;
+}
+
+span.ts-status-text-process {
+    font-weight: 500;
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    width: 130px;
+}
+
+//Charts
+
+
+/*============================
+         For Sub Types
+  ============================*/
+.ts-d-subtype-category {
+    .ant-select-single .ant-select-selector .ant-select-selection-item, .ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+        padding: 0;
+        line-height: 38px;
+        transition: all 0.3s;
+    }
+}
+

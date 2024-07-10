@@ -1,0 +1,140 @@
+<?php
+class TicketingSystemAPI{
+
+    private const BASE_URL_BACKEND  = 'http://192.168.1.186/ticketApi/api/';
+    private const BASE_URL_FRONTEND = 'http://192.168.1.186/ticket/';
+    private const CUSTOMER_INFO_URL = 'http://192.168.1.167/ccmw/account/common-api-function?sercret=PVFzWnlWQmJsdkNxQUszcWJrbFlUNjJVREpVMXR6R09kTHN5QXNHYSt1ZWM=&rm=C&callid=61657894123478512478&connname=MWCSINME&cli=<TICKET_MOBLIE>&eml=';
+    private const USERNAME = 'crm_api_user';
+    private const PASSWORD = 1234;
+    
+    public function getTicketListByMobile($requestUrl, Array $data){
+        
+        $headers = array(
+			"Content-Type: application/json",
+			"Connection: keep-alive",
+            "username: " . self::USERNAME,
+            "password: " . self::PASSWORD
+		);
+
+        $data['requestTimestamp'] = time();
+		$url 	= self::BASE_URL_BACKEND . $requestUrl . '?' . http_build_query($data);
+		$result = $this->curlRequest($headers, $url, "GET");
+		return json_encode($result['data']);
+
+    }
+
+    public function getTicketReplyIframe($ticket_id){
+
+		$token = $this->getAuthToken();
+		if($token){
+			$iframe['iframe'] = '<iframe width="100%" height="800" style="border:1px solid black;" src="' . self::BASE_URL_FRONTEND . 'crm/crm-ticket-reply/' . $ticket_id . '/' . $token . '" title="Ticket Details"></iframe>';
+		}else{
+			$iframe['iframe'] = "Invalid Request !";
+		}
+		return json_encode([$iframe]);
+
+    }
+
+    public function getTicketCreateIframe($cli=''){
+
+		$token = $this->getAuthToken();
+		if($token){
+			$iframe['iframe'] = '<iframe width="100%" height="800" style="border:1px solid black;" src="' . self::BASE_URL_FRONTEND . 'crm/crm-create-ticket/' . $token . '/' . $cli . '" title="Create Ticket"></iframe>';
+		}else{
+			$iframe['iframe'] = "Invalid Request !";
+		}
+		return json_encode([$iframe]);
+
+    }
+
+	public function getAuthToken(){
+		$url 	= self::BASE_URL_BACKEND . 'crm/get-auth-token';
+        $headers = array(
+			"Content-Type: application/json",
+			"Connection: keep-alive",
+            "username: " . self::USERNAME,
+            "password: " . self::PASSWORD
+		);
+		$authData = $this->curlRequest($headers, $url, "GET");
+		return $authData ?: null;
+	}
+
+	public function getCustomerInfo($mobile){
+		$customer_info = $this->curlRequest([], str_replace('<TICKET_MOBLIE>', $mobile, SELF::CUSTOMER_INFO_URL), "GET");
+		// echo '<pre>';
+		$data = [];
+		if( 
+			is_array($customer_info) && 
+			array_key_exists('gcode', $customer_info[0])
+		){
+			$data['first_name']	= $customer_info[0]['CustomerName1'];
+			$data['email']		= $customer_info[0]['Email1'];
+			$data['mobile']		= $mobile;
+			$data['requestTimestamp'] = time();
+			$headers = array(
+				// "Content-Type: application/json",
+				"Connection: keep-alive",
+				"username: " . self::USERNAME,
+				"password: " . self::PASSWORD
+			);
+			// Save User
+			$result = $this->curlRequest($headers, self::BASE_URL_BACKEND . 'crm/createUser', "POST", $data);
+			// var_dump($result);
+		}
+		
+	}
+
+	private function curlRequest($headers, $url, $method, Array $data=null) {
+
+        $curl = curl_init($url);
+		curl_setopt($curl, CURLOPT_URL, $url);
+		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($curl, CURLINFO_HEADER_OUT, true);
+		curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);
+		curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($curl, CURLOPT_TIMEOUT, 60);
+		// curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
+		// curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+
+		if($data){
+			curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+		}
+
+		$response = curl_exec($curl);
+
+		if($data = $this->xmlToArray($response)){
+			$result = $data;
+		}elseif($data = $this->jsonToArray($response)){
+			$result = $data;
+		}else{
+			$result = $response;
+		}
+
+		if(curl_errno($curl)){
+			// throw the an Exception.
+			throw new Exception(curl_error($curl));
+		}
+		curl_close($curl);
+        return $result;
+
+    }
+
+	public function jsonToArray($string) {
+		$r = json_decode($string, 1);
+		if(json_last_error() === JSON_ERROR_NONE){// No error
+		return $r;
+		}
+		return false;
+	}
+	
+	public function xmlToArray($xml){
+		
+		$xml = @simplexml_load_string($xml, "SimpleXMLElement", LIBXML_NOCDATA);
+		if($array = $this->jsonToArray( json_encode($xml), TRUE )){
+			return $array;
+		}
+		return false;
+		
+	}
+	
+}

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Ticketing Systems</title>
+</head>
+<body>
+<!--Dashboard Header-->
+<div class="ts-d-header-area fixed-top">
+    <div class="container-fluid">
+        <div class="ts-d-header-main">
+            <div class="ts-ds-logo">
+                <a href="">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="ts-user">
+                <p><span class="ts-user-greetings">Good Evening</span>
+                    <span class="ts-user-name">IBRAHIM</span>
+                    <img class="ts-user-pic" src="assets/images/admin-user.svg" alt="">
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ts-d-main-area">
+    <!--    Sidebar-->
+    <div class="ts-d-sidebar-area">
+
+        <!--        Profile Avatar-->
+        <div class="ts-d-user-avatar">
+            <img src="assets/images/profile-user.svg" alt="">
+            <span class="ts-d-user-avatar-name">
+                Genuity Systems
+            </span>
+        </div>
+
+
+        <div class="ts-d-sidebar-navigation mt-5">
+            <h6>NAVIGATION</h6>
+            <ul class="ts-d-nav">
+                <li><a class="active" href=""><i class="bi bi-house-door"></i> Dashboard</a></li>
+                <li><a href=""><i class="bi bi-person-fill"></i> Profile</a></li>
+                <li><a href=""><i class="bi bi-pip"></i> Ticket</a></li>
+                <li><a href=""><i class="bi bi-bell"></i> Notification <span class="ts-d-notification-no">4</span> </a>
+                </li>
+                <li><a href=""><i class="bi bi-bar-chart-line-fill"></i> Report</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!--    End Sidebar-->
+
+    <!--    Main Content Area-->
+    <div class="ts-d-common-area">
+
+        <!--        Header Components-->
+        <div class="ts-d-top-header mb-2">
+            <div class="ts-d-acc-name">
+                <span class="bi bi-list"></span>
+                <span class="ts-d-acc-name-text text-uppercase">DASHBOARD</span>
+            </div>
+            <div class="ts-d-date">
+                <input type="text" id="datepicker">
+                <span class="bi bi-filter ts-d-filter"></span>
+            </div>
+        </div>
+        <!--       End Header Components-->
+
+
+        <!--        Ticket Buttons Area-->
+        <div class="row">
+            <div class="ts-ticket-buttons-area col-lg-5">
+                <div class="ts-d-ticket ts-total-ticket">
+
+                    <div class="ts-d-ticket-header">
+                        <span class="ts-d-ticket-title">Total Ticket</span>
+                        <span class="ts-ticket-icon ts-icon-blue">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                  class="bi bi-ticket-detailed " viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13ZM4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"/>
+                        </svg>
+                        </span>
+
+                    </div>
+
+                    <span class="ts-d-ticket-no">5125</span>
+                    <p>
+                        <span class="ts-roi-plus">
+                            <i class="bi bi-forward-fill"></i> 5.27%
+                        </span> Since Last Month
+                    </p>
+
+
+                </div>
+
+                <div class="ts-d-ticket ts-total-ticket">
+
+                    <div class="ts-d-ticket-header">
+                        <span class="ts-d-ticket-title">Create Ticket</span>
+                        <span class="ts-ticket-icon ts-icon-sky">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                  class="bi bi-ticket-detailed " viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13ZM4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"/>
+                        </svg>
+                        </span>
+
+                    </div>
+                    <span class="ts-d-ticket-no">5125</span>
+                    <p>
+                        <span class="ts-roi-minus">
+                            <i class="bi bi-forward-fill"></i> 5.27%
+                        </span> Since Last Month
+                    </p>
+
+
+                </div>
+
+                <div class="ts-d-ticket ts-total-ticket">
+
+                    <div class="ts-d-ticket-header">
+                        <span class="ts-d-ticket-title">Open Ticket</span>
+                        <span class="ts-ticket-icon ts-icon-pink">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                  class="bi bi-ticket-detailed " viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13ZM4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"/>
+                        </svg>
+                        </span>
+
+                    </div>
+                    <span class="ts-d-ticket-no">5125</span>
+                    <p>
+                        <span class="ts-roi-minus">
+                            <i class="bi bi-forward-fill"></i> 5.27%
+                        </span> Since Last Month
+                    </p>
+
+
+                </div>
+
+                <div class="ts-d-ticket ts-total-ticket">
+                    <div class="ts-d-ticket-header">
+                        <span class="ts-d-ticket-title">Close Ticket</span>
+                        <span class="ts-ticket-icon ts-icon-green">
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                  class="bi bi-ticket-detailed " viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                  d="M0 4.5A1.5 1.5 0 0 1 1.5 3h13A1.5 1.5 0 0 1 16 4.5V6a.5.5 0 0 1-.5.5 1.5 1.5 0 0 0 0 3 .5.5 0 0 1 .5.5v1.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 11.5V10a.5.5 0 0 1 .5-.5 1.5 1.5 0 1 0 0-3A.5.5 0 0 1 0 6V4.5ZM1.5 4a.5.5 0 0 0-.5.5v1.05a2.5 2.5 0 0 1 0 4.9v1.05a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-1.05a2.5 2.5 0 0 1 0-4.9V4.5a.5.5 0 0 0-.5-.5h-13ZM4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5Zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7a1 1 0 0 0 0 2h6a1 1 0 1 0 0-2H5Z"/>
+                        </svg>
+                        </span>
+
+                    </div>
+                    <span class="ts-d-ticket-no">5125</span>
+                    <p>
+                        <span class="ts-roi-plus">
+                            <i class="bi bi-forward-fill"></i> 5.27%
+                        </span> Since Last Month
+                    </p>
+                </div>
+            </div>
+
+            <!--            Charts Area-->
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="ts-msc"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div id="ts-wgr"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--        Work Process-->
+        <div class="ts-d-workprocess-table-area mt-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ts-workprocess-table-main">
+                        <div class="ts-workprocess-table-header">
+                            <p class="ts-components-title text-uppercase">WORK PROCESS</p>
+                            <span><i class="bi bi-three-dots-vertical"></i></span>
+                        </div>
+                        <div class="ts-workprocess-table-content">
+                            <table class="table table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th class="text-center" scope="col"> SL.No</th>
+                                    <th scope="col">Product</th>
+                                    <th scope="col">Subject</th>
+                                    <th scope="col">Creator</th>
+                                    <th scope="col">Client ID</th>
+                                    <th scope="col">TIME</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Details</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th class="text-center" scope="row">1</th>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>@mdo</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>
+                                        <div class="ts-status-area">
+                                            <span class="ts-status-text-done">Done</span>
+                                            <span class="ts-status-done"></span>
+                                        </div>
+                                    </td>
+                                    <td>Otto</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>
+                                        <div class="ts-status-area">
+                                            <span class="ts-status-text-expired">Expired</span>
+                                            <span class="ts-status-expired"></span>
+                                        </div>
+                                    </td>
+                                    <td>Otto</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">3</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>
+                                        <div class="ts-status-area">
+                                            <span class="ts-status-text-pending">Pending</span>
+                                            <span class="ts-status-pending"></span>
+                                        </div>
+                                    </td>
+                                    <td>Otto</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">4</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>
+                                        <div class="ts-status-area">
+                                            <span class="ts-status-text-process">Process</span>
+                                            <span class="ts-status-process"></span>
+                                        </div>
+                                    </td>
+                                    <td>Otto</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">5</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>
+                                        <div class="ts-status-area">
+                                            <span class="ts-status-text-done">Done</span>
+                                            <span class="ts-status-done"></span>
+                                        </div>
+                                    </td>
+                                    <td>Otto</td>
+                                </tr>
+                                <tr>
+                                    <th class="text-center" scope="row">6</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td>@twitter</td>
+                                    <td>Mark</td>
+                                    <td>Otto</td>
+                                    <td>
+                                        <div class="ts-status-area">
+                                            <span class="ts-status-text-process">Process</span>
+                                            <span class="ts-status-process"></span>
+                                        </div>
+                                    </td>
+                                    <td>Otto</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--     End Work Process-->
+
+
+    </div>
+    <!--    End Main Content Area-->
+</div>
+<!--all scripts-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="assets/js/main.js"></script>
+<!--all scripts-->
+</body>
+</html>

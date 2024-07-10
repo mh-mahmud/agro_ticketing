@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Ticketing Systems | Tickets Overview</title>
+</head>
+<body>
+<!--Dashboard Header-->
+<div class="ts-d-header-area fixed-top">
+    <div class="container-fluid">
+        <div class="ts-d-header-main">
+            <div class="ts-ds-logo">
+                <a href="">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+            </div>
+            <div class="ts-user">
+                <p><span class="ts-user-greetings">Good Evening</span>
+                    <span class="ts-user-name">IBRAHIM</span>
+                    <img class="ts-user-pic" src="assets/images/admin-user.svg" alt="">
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="ts-d-main-area">
+    <!--    Sidebar-->
+    <div class="ts-d-sidebar-area">
+
+        <!--        Profile Avatar-->
+        <div class="ts-d-user-avatar">
+            <img src="assets/images/profile-user.svg" alt="">
+            <span class="ts-d-user-avatar-name">
+                Genuity Systems
+            </span>
+        </div>
+
+
+        <div class="ts-d-sidebar-navigation mt-5">
+            <h6>NAVIGATION</h6>
+            <ul class="ts-d-nav">
+                <li><a class="active" href="dashboard.html"><i class="bi bi-house-door"></i> Dashboard</a></li>
+                <li><a href="profile.html"><i class="bi bi-person-fill"></i> Profile</a></li>
+                <li><a href="create-ticket.html"><i class="bi bi-pip"></i> Ticket</a></li>
+                <li><a href=""><i class="bi bi-bell"></i> Notification <span class="ts-d-notification-no">4</span> </a>
+                </li>
+                <li><a href=""><i class="bi bi-bar-chart-line-fill"></i> Report</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <!--    End Sidebar-->
+
+    <!--    Main Content Area-->
+    <div class="ts-d-common-area">
+
+        <!--        Header Components-->
+        <div class="ts-d-top-header mb-2">
+            <div class="ts-d-acc-name">
+                <span class="bi bi-list"></span>
+                <span class="ts-d-acc-name-text text-uppercase">Ticket detail</span>
+            </div>
+        </div>
+        <!--       End Header Components-->
+
+
+        <!--        Ticket Area-->
+        <div class="ts-d-tickets-area">
+
+            <div class="ts-d-submenu-area">
+
+
+                <div class="ts-d-left-toolbar ts-d-top-toolbar">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="bi bi-house-door"></i> Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="bi bi-ui-checks"></i> My Job
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <i class="bi bi-file-lock"></i> Change Password
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class="ts-d-right-toolbar ts-d-top-toolbar">
+                    <ul>
+                        <li>
+                            <a href="open-ticket.html">
+                                <i class="bi bi-folder2-open"></i> Opened Ticket
+                            </a>
+                        </li>
+                        <li>
+                            <a href="close-ticket.html">
+                                <i class="bi bi-folder-x"></i> Close Ticket
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="ts-d-tickets-overview">
+
+                <!--  Single Ticket Details Area-->
+                <div class="ts-d-ticket-details-area mt-4">
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <div class="ts-d-ticket-details-main">
+                                <h6 class="text-capitalize ts-d-ticket-details-header mb-3">Ticket Details</h6>
+                                <table>
+                                    <tr>
+                                        <td>Ticket Ref #</td>
+                                        <td>:</td>
+                                        <td>0500211009675</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>user</td>
+                                        <td>:</td>
+                                        <td>Ibrahim</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Subject</td>
+                                        <td>:</td>
+                                        <td>Test Ticket</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td> Product</td>
+                                        <td>:</td>
+                                        <td>gPlex Switch</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Category</td>
+                                        <td>:</td>
+                                        <td>Technical Support</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Sub Category</td>
+                                        <td>:</td>
+                                        <td>Others</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Created</td>
+                                        <td>:</td>
+                                        <td>March 16, 2021</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Status</td>
+                                        <td>:</td>
+                                        <td>Pending - Customer</td>
+                                    </tr>
+                                </table>
+                                <button class="btn btn-danger btn-block mt-3">Close Ticket</button>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-8">
+                            <div class="ts-d-message-main">
+                                <ul class="ts-d-message-list">
+                                    <li class="ts-d-m-common">
+                                        <div class="ts-d-m-other ts-d-message-text-area">
+                                            <div class="ts-d-message-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias beatae
+                                            </div>
+                                            <div class="ts-d-m-author">
+                                                <img src="assets/images/girl.png" alt="">
+                                            </div>
+
+                                        </div>
+
+                                        <div class="ts-d-message-time">
+                                            <span class="mr-2">Time</span> <small>14:16:36 16-10-2021</small>
+                                        </div>
+                                    </li>
+
+                                    <li class="ts-d-m-common">
+                                        <div class="ts-d-m-other ts-d-message-text-area ">
+                                            <div class="ts-d-message-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias beatae
+                                                commodi dicta eveniet illo impedit inventore laudantium necessitatibus
+                                                placeat, quas repellendus.
+                                            </div>
+                                            <div class="ts-d-m-author">
+                                                <img src="assets/images/girl.png" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="ts-d-message-time">
+                                            <span class="mr-2">Time</span> <small>14:16:36 16-10-2021</small>
+                                        </div>
+                                    </li>
+
+                                    <li class="ts-d-m-common">
+                                        <div class="ts-d-m-self ts-d-message-text-area">
+                                            <div class="ts-d-message-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias beatae
+                                                commodi dicta eveniet illo impedit inventore laudantium necessitatibus
+                                                perspiciatis, repellendus ullam veniam. A adipisci commodi earum nemo
+                                                placeat, quas repellendus.
+                                            </div>
+                                            <div class="ts-d-m-author">
+                                                <img src="assets/images/man.png" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="ts-d-message-time">
+                                            <span class="mr-2">Time</span> <small>14:16:36 16-10-2021</small>
+                                        </div>
+                                    </li>
+
+                                    <li class="ts-d-m-common">
+                                        <div class="ts-d-m-other ts-d-message-text-area">
+                                            <div class="ts-d-message-text">
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias beatae
+                                                commodi dicta eveniet illo impedit inventore laudantium necessitatibus
+                                                perspiciatis, repellendus ullam veniam. A adipisci commodi earum nemo
+                                                placeat, quas repellendus.
+                                            </div>
+                                            <div class="ts-d-m-author">
+                                                <img src="assets/images/girl.png" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="ts-d-message-time">
+                                            <span class="mr-2">Time</span> <small>14:16:36 16-10-2021</small>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div class="ts-d-message-footer">
+                                    <input type="text" id="ts-d-chat-input" placeholder="Type Your Message">
+                                    <button id="ts-d-chat-button">send <i class="bi bi-send"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <svg id="ts-d-ticket-bg-svg" xmlns="http://www.w3.org/2000/svg" width="296.767" height="635.984"
+                         viewBox="0 0 296.767 635.984">
+                        <g transform="translate(1550.12 -482.01)" opacity="0.2">
+                            <path
+                                d="M-1412,586.54c-10.27,37.85-6.74,79.12-1.85,118.54.17,1.4.35,2.8.52,4.21.98,7.72,1.97,15.49,2.89,23.27,1.57,13.37,2.93,26.79,3.57,40.17,1.2,24.76-.04,49.34-6.84,73.12-10.27,35.91-32.7,67.27-59.92,93.05q-2.4,2.28-4.84,4.48c-1.78,1.63-3.59,3.22-5.41,4.8-20.49,17.69-43.03,32.69-66.24,46.69V487.01a5,5,0,0,1,5-5h196.96c-18.99,27.79-42.9,52.56-56.41,83.35A150.8,150.8,0,0,0-1412,586.54Z"
+                                fill="#0073e1" opacity="0.35"/>
+                            <path
+                                d="M-1272.26,595.61c-20.86,36.05-53.93,62.93-86.53,90-17.64,14.64-35.54,29.82-51.65,46.95q-5.37,5.7-10.45,11.7a219.214,219.214,0,0,0-26.63,39.05c-20.18,38.26-27.92,83.88-30.18,131.23-.46,9.56-.7,19.18-.77,28.84-.04,5.36-.02,10.72.03,16.09.36,35.79,2.12,73.86-10.75,107.54-10.77,28.15-35.65,51.33-60.93,50.98V487.01a5,5,0,0,1,5-5h281.66C-1245.92,518-1252.72,561.82-1272.26,595.61Z"
+                                fill="#0dc3f8" opacity="0.4"/>
+                        </g>
+                    </svg>
+
+                </div>
+                <!--  End Single Ticket Details Area-->
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <!--    End Main Content Area-->
+</div>
+
+
+<!--all scripts-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="assets/js/main.js"></script>
+<!--all scripts-->
+</body>
+</html>
